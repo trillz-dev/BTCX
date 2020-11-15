@@ -981,7 +981,7 @@ body {
     hero-area
  ====================================================*/
 .hero-area {
-  background-color: #4e3a9d;
+  background-color: #112837;
   color: #fff;
   position: relative;
   padding-top: 320px;
@@ -1372,8 +1372,8 @@ body {
     breadcrumb-area
  ====================================================*/
 .breadcrumb-area {
-  padding-top: 259px;
-  padding-bottom: 115px;
+  padding-top: 125px;
+  /* padding-bottom: px; */
   position: relative;
   z-index: 1;
   color: #fff;
@@ -1383,14 +1383,14 @@ body {
   background-attachment: fixed; }
   @media only screen and (min-width: 480px) and (max-width: 767px) {
     .breadcrumb-area {
-      padding-top: 285px; } }
+      padding-top: 120px; } }
   @media (max-width: 480px) {
     .breadcrumb-area {
-      padding-top: 280px;
-      padding-bottom: 90px; } }
+      padding-top: 120px;
+      padding-bottom: 0px; } }
   @media (max-width: 320px) {
     .breadcrumb-area {
-      padding-top: 304px;
+      padding-top: 120px;
       padding-bottom: 75px; } }
   .breadcrumb-area .breadcrumb-content {
     position: relative; }
@@ -1453,9 +1453,9 @@ body {
           font-size: 28px; }
     .breadcrumb-area .breadcrumb-content .text-outline {
       -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: rgba(255, 255, 255, 0.1);
-      -ms-text-stroke-color: rgba(255, 255, 255, 0.1);
-      -o-text-stroke-color: rgba(255, 255, 255, 0.1);
+      -webkit-text-stroke-color: #112837;
+      -ms-text-stroke-color: #112837;
+      -o-text-stroke-color: #112837;
       color: transparent;
       text-transform: uppercase;
       font-size: 170px;
@@ -1487,7 +1487,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(40, 58, 94, 0.9);
+    background-color: #112837;
     z-index: -1; }
 
 /*======== sidebar ===========*/
