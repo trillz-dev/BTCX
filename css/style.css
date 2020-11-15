@@ -1377,7 +1377,7 @@ body {
   position: relative;
   z-index: 1;
   color: #fff;
-  background-image: url("../images/breadcrumb-bg.jpg");
+  /* background-image: url("../images/breadcrumb-bg.jpg"); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed; }
