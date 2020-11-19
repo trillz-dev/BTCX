@@ -3,7 +3,7 @@ var ember = [];
 var usdInput = document.getElementById('amtUSD');
 var btcInput = document.getElementById('amtBTC');
 
-ember.btcPrice = 6549.995;
+ember.btcPrice = 17652.995;
 ember.socket = io.connect('https://socket.coincap.io');
 ember.socket.on('trades', function(data) {
     var amt = document.getElementById('amtUSD');

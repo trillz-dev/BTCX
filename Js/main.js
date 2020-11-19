@@ -1,9 +1,4 @@
 /*---------------------------------------------
-Template name:  Bitcon
-Version:        1.0
-Author:         techydevs
-Author Email:   contact@techydevs.com
-
 [Table of Content]
 
 01: Preloader
