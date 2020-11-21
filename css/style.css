@@ -984,7 +984,7 @@ body {
   background-color: #112837;
   color: #fff;
   position: relative;
-  padding-top: 320px;
+  padding-top: 250px;
   padding-bottom: 465px;
   overflow: hidden; }
   @media (max-width: 1366px) {
@@ -3268,6 +3268,7 @@ body {
       margin-bottom: 30px;
       position: relative;
       z-index: 1;
+      height: 380px;
       border: 1px solid rgba(103, 114, 134, 0.2); }
       @media only screen and (min-width: 481px) and (max-width: 767px) {
         .howitworks-area .hiw-content .hiw-item {
@@ -3373,7 +3374,7 @@ body {
         opacity: 0;
         visibility: hidden; }
       .howitworks-area .hiw-content .hiw-item:after {
-        background-image: url("../images/blog-img2.jpg");
+        /* background-image: url("../images/blog-img2.jpg"); */
         background-position: center;
         background-color: transparent;
         z-index: -1; }
@@ -4765,7 +4766,7 @@ body {
   padding-top: 110px;
   padding-bottom: 90px;
   position: relative;
-  background-image: url("../images/blog-img10.jpg");
+  /* background-image: url("../images/blog-img10.jpg"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -7250,6 +7251,26 @@ main {
 
 
 
+
+/* TRADING PAGE */
+
+.trading-section {
+  padding-top: 100px;
+  height: 100vh;
+}
+
+
+
+
+/* INVESTMENTS PAGE */
+
+.investment-section {
+  margin-top: -65px;
+}
+
+
+
+
 /* TRANSACTION PAGE */
 
 
@@ -7320,10 +7341,134 @@ main {
 
 
 
-/* INVESTMENTS PAGE */
 
-.investment-section {
-  margin-top: -65px;
+
+/* DEPOSIT SECTION */
+
+.deposit-section {
+  /* margin-top: 100px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.deposit-container {
+  width: 500px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);
+  /* position: relative;
+  left: -250px; */
+}
+.deposit-card {
+  /* width: 400px; */
+  margin-top: 50px;
+}
+.deposit-title {
+  font-weight: bold;
+  width: 400px;
+  font-size: 26px;
+  line-height: 1.3;
+  text-align: center;
+  margin-bottom: 40px;
+  /* color: #0F1222; */
+}
+.deposit-option {
+  /* position: relative; */
+}
+.deposit-link {
+  color: #71789E;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  width: 100%;
+  height: 50px;
+  padding: 8px 75px 8px 15px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  letter-spacing: .2px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.deposit-link:hover {
+  text-decoration: none;
+  color: #3D405C;
+  cursor: pointer;
+  background-color: #E2E2EB;
+}
+.deposit-img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+
+
+/* WITHDRAW SECTION */
+
+.withdraw-section {
+  /* margin-top: 100px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.withdraw-container {
+  width: 500px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);
+  /* position: relative;
+  left: -250px; */
+}
+.withdraw-card {
+  /* width: 400px; */
+  margin-top: 50px;
+}
+.withdraw-title {
+  font-weight: bold;
+  width: 400px;
+  font-size: 26px;
+  line-height: 1.3;
+  text-align: center;
+  margin-bottom: 40px;
+  /* color: #0F1222; */
+}
+.withdraw-option {
+  /* position: relative; */
+}
+.withdraw-link {
+  color: #71789E;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  width: 100%;
+  height: 50px;
+  padding: 8px 75px 8px 15px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  letter-spacing: .2px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.withdraw-link:hover {
+  text-decoration: none;
+  color: #3D405C;
+  cursor: pointer;
+  background-color: #E2E2EB;
+}
+.withdraw-img {
+  width: 30px;
+  margin-right: 10px;
 }
 
 
@@ -7588,134 +7733,6 @@ main {
 }
 
 
-
-/* DEPOSIT SECTION */
-
-.deposit-section {
-  /* margin-top: 100px; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.deposit-container {
-  width: 500px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);
-  /* position: relative;
-  left: -250px; */
-}
-.deposit-card {
-  /* width: 400px; */
-  margin-top: 50px;
-}
-.deposit-title {
-  font-weight: bold;
-  width: 400px;
-  font-size: 26px;
-  line-height: 1.3;
-  text-align: center;
-  margin-bottom: 40px;
-  /* color: #0F1222; */
-}
-.deposit-option {
-  /* position: relative; */
-}
-.deposit-link {
-  color: #71789E;
-  text-decoration: none;
-  display: block;
-  font-size: 18px;
-  width: 100%;
-  height: 50px;
-  padding: 8px 75px 8px 15px;
-  border-radius: 10px;
-  text-transform: capitalize;
-  box-sizing: border-box;
-  letter-spacing: .2px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-}
-.deposit-link:hover {
-  text-decoration: none;
-  color: #3D405C;
-  cursor: pointer;
-  background-color: #E2E2EB;
-}
-.deposit-img {
-  width: 30px;
-  margin-right: 10px;
-}
-
-
-
-/* WITHDRAW SECTION */
-
-.withdraw-section {
-  /* margin-top: 100px; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.withdraw-container {
-  width: 500px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);
-  /* position: relative;
-  left: -250px; */
-}
-.withdraw-card {
-  /* width: 400px; */
-  margin-top: 50px;
-}
-.withdraw-title {
-  font-weight: bold;
-  width: 400px;
-  font-size: 26px;
-  line-height: 1.3;
-  text-align: center;
-  margin-bottom: 40px;
-  /* color: #0F1222; */
-}
-.withdraw-option {
-  /* position: relative; */
-}
-.withdraw-link {
-  color: #71789E;
-  text-decoration: none;
-  display: block;
-  font-size: 18px;
-  width: 100%;
-  height: 50px;
-  padding: 8px 75px 8px 15px;
-  border-radius: 10px;
-  text-transform: capitalize;
-  box-sizing: border-box;
-  letter-spacing: .2px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-}
-.withdraw-link:hover {
-  text-decoration: none;
-  color: #3D405C;
-  cursor: pointer;
-  background-color: #E2E2EB;
-}
-.withdraw-img {
-  width: 30px;
-  margin-right: 10px;
-}
 
 
 /* SUPPORT SECTION */
