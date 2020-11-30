@@ -24,6 +24,8 @@
     <link href="/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
     <link href="/vendor/themify-icons/css/themify-icons.css" rel="stylesheet">
     <link href="/vendor/weather-icons/css/weather-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+
 
     <!--custom scrollbar-->
     <link href="/vendor/m-custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
@@ -90,69 +92,87 @@
                     <div class="nav-link nav-link-collapse collapsed" data-toggle="collapse">
                         <i class="vl_search"></i>
                         <span class="nav-link-text">
-                            <input type="text" class="search-form" placeholder="Search Report"/>
+                            <input type="text" class="search-form" placeholder="Search . . ."/>
                         </span>
                     </div>
                 </li>
 
                 <li class="nav-item dash-nav-item active">
-                    <a class="nav-link" href="/dashboard/main.html">
-                        <i class="vl_dashboard"></i>
+                    <a class="dash-nav-link nav-link" href="/dashboard/main.html">
+                        <i class="dash-nav-link-icon vl_dashboard"></i>
                         <span class="nav-link-text">Dashboard </span>
                     </a>
                 </li>
 
                 <li class="nav-item dash-nav-item">
-                    <a class="nav-link" href="/dashboard/investment.html">
-                        <i class="vl_slider-h-range"></i>
+                    <a class="dash-nav-link nav-link" href="/dashboard/investment.html">
+                        <i class="dash-nav-link-icon vl_slider-h-range"></i>
                         <span class="nav-link-text">Investment</span>
                     </a>
                 </li>
                 <li class="nav-item dash-nav-item">
-                    <a class="nav-link" href="/dashboard/transaction.html">
-                        <i class="vl_bond"></i>
+                    <a class="dash-nav-link nav-link" href="/dashboard/transaction.html">
+                        <i class="dash-nav-link-icon vl_bond"></i>
                         <span class="nav-link-text">Transactions</span>
                     </a>
                 </li>
 
                 <!-- <li class="nav-item dash-nav-item">
-                    <a class="nav-link" href="calendar-external-events.html">
-                        <i class="vl_calendar"></i>
+                    <a class="nav-ldash-nav-link ink" href="calendar-external-events.html">
+                        <i class="vl_cadash-nav-link-icon lendar"></i>
                         <span class="nav-link-text">Calendar <span class="badge badge-primary">2</span> </span>
                     </a>
                 </li> -->
 
                 <li class="nav-item dash-nav-item">
-                    <a class="nav-link" href="/dashboard/deposit.html">
-                        <i class="vl_hand-mike"></i>
+                    <a class="dash-nav-link nav-link" href="/dashboard/deposit.html">
+                        <i class="dash-nav-link-icon">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-credit-card-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0V4z"/>
+                            <path fill-rule="evenodd" d="M0 7v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7H0zm3 2a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1H3z"/>
+                          </svg>
+                        </i>
                         <span class="nav-link-text">Deposit Funds</span>
                     </a>
                 </li>
 
                 <li class="nav-item dash-nav-item">
-                    <a class="nav-link" href="/dashboard/withdraw.html">
-                        <i class="vl_form"></i>
+                    <a class="dash-nav-link nav-link" href="/dashboard/withdraw.html">
+                        <i class="dash-nav-link-icon">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-credit-card" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+                                <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+                              </svg>
+                        </i>
                         <span class="nav-link-text">Withdrawal</span>
                     </a>
                 </li>
 
                 <li class="nav-item dash-nav-item">
-                    <a class="nav-link" href="/dashboard/settings.html">
-                        <i class="vl_grid-even"></i>
+                    <a class="dash-nav-link nav-link" href="/dashboard/settings.html">
+                        <i class="dash-nav-link-icon">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sliders" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z"/>
+                              </svg>
+                        </i>
                         <span class="nav-link-text">Settings</span>
                     </a>
                 </li>
 
                 <li class="nav-item dash-nav-item">
-                    <a class="nav-link" href="/dashboard/support.html">
-                        <i class="vl_graph-bar"></i>
+                    <a class="dash-nav-link nav-link" href="/dashboard/support.html">
+                        <i class="dash-nav-link-icon">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chat-left-text-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+                              </svg>
+                        </i>
                         <span class="nav-link-text">Support</span>
                     </a>
                 </li>
 
                 <li class="nav-item dash-nav-item">
-                    <a class="nav-link" href="/login.html">
-                        <i class="vl_files"></i>
+                    <a class="dash-nav-link nav-link" href="/login.html">
+                        <i class="dash-nav-link-icon fa fa-sign-in-alt"></i>
                         <span class="nav-link-text">Sign Out</span>
                     </a>
                 </li>
