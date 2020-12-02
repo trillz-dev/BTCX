@@ -786,7 +786,7 @@
 @media screen and ( max-width: 500px ) {
   .support-container {
     padding-top: 100px;
-    padding-left: 30px;
+    padding-left: 25px;
     width: 350px;
   }
   
@@ -803,7 +803,7 @@
   
   .support-form {
     width: 330px;
-    padding: 30px 20px 30px 20px;
+    padding: 30px 25px 30px 20px;
   }
   
   #my-textarea {
