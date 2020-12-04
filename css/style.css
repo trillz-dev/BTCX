@@ -1941,7 +1941,7 @@ body {
     .form-shared .form-shared-content {
       margin-bottom: 60px; } }
   .form-shared .form-shared-content .login-box {
-    background-image: url("../images/video.jpg");
+    /* background-image: url("../images/video.jpg"); */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -2073,7 +2073,7 @@ body {
       -moz-border-radius: 4px;
       border-radius: 4px; }
     .form-shared .form-shared-content ul li:after {
-      background-image: url("../images/blog-img9.jpg");
+      /* background-image: url("../images/blog-img9.jpg"); */
       background-position: center;
       z-index: -2; }
     .form-shared .form-shared-content ul li + li {
