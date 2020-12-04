@@ -2,26 +2,24 @@
 <html lang="en">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="author" content="TechyDevs">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bitcon - Bitcoin Cryptocurrency HTML Template</title>
+    <title>Bitcon - Bitcoin Cryptocurrency</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="images/favicon.png">
+    <link rel="icon" href="/public/images/favicon.png">
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,500,600,700,800&display=swap" rel="stylesheet">
 
-
-    <!-- Template CSS Files -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/font-awesome.css">
+    <link rel="stylesheet" href="/public/css/flaticon.css">
+    <link rel="stylesheet" href="/public/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/public/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/public/css/magnific-popup.css">
+    <link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
 <!-- start per-loader -->
@@ -43,7 +41,7 @@
             <div class="row header-menu-row">
                 <div class="col-lg-3">
                     <div class="logo">
-                        <a href="index.html"> <img src="images/logo.png" alt="logo"></a>
+                        <a href="/views/mainsite/index.html"> <img src="/public/images/logo.png" alt="logo"></a>
                     </div><!-- end logo -->
                 </div><!-- end col-lg-3-->
                 <div class="col-lg-9 main-menu-wrapper">
@@ -96,7 +94,7 @@
         <div class="side-menu-wrap">
             <ul class="side-menu-ul">
                 <li class="sidenav__item">
-                    <a href="index.html">home</a>
+                    <a href="./index.html">home</a>
                 </li>
                 <li class="sidenav__item">
                     <a href="./about.html">about</a>
@@ -114,7 +112,7 @@
                     <a href="./login.html">sign in</a>
                 </li>
                 <li class="sidenav__item sidenav__item2 text-center">
-                    <a href="sign-up.html"><i class="fa fa-sign-in-alt"></i> sign up</a>
+                    <a href="./sign-up.html"><i class="fa fa-sign-in-alt"></i> sign up</a>
                 </li>
             </ul>
         </div><!-- end side-menu-wrap -->
@@ -136,189 +134,75 @@
 ================================= -->
 
 <!-- ================================
-       START PACKAGE AREA
+       START CHART AREA
 ================================= -->
-<section class="package-area text-center">
+<section class="chart-area">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div class="sec-heading">
-                    <div class="heading-circle m-x-auto"></div>
-                    <p class="sec__meta">affordable packages</p>
-                    <h2 class="sec__title">Choose Investment Plan.</h2>
-                </div><!-- end sec-heading -->
-            </div><!-- end col-lg-12 -->
-        </div><!-- end row -->
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="package-tab-content">
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-tabs justify-content-center" role="tablist">
-                        <li role="presentation">
-                            <a href="#tab4" role="tab" data-toggle="tab" class="active" aria-selected="true">regular</a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#tab5" role="tab" data-toggle="tab" aria-selected="false">premium</a>
-                        </li>
+        <div class="row chart-wrapper">
+            <div class="col-lg-6">
+                <div class="chart-item">
+                    <div class="sec-heading">
+                        <div class="heading-circle"></div>
+                        <p class="sec__meta">discover bitcon</p>
+                        <h2 class="sec__title">Bitcoin Distribution.</h2>
+                        <p class="sec__desc">
+                            There are many variations of passages of Lorem Ipsum available,
+                            but the majority have suffered alteration in some form, by injected humour,
+                            or randomised words which don't look even slightly believable.
+                            If you are going to use a passage of Lorem Ipsum,
+                            you need to be sure there isn't anything embarrassing
+                        </p>
+                        <a href="#" class="theme-btn">Become a Member</a>
+                    </div><!-- end sec-heading -->
+                </div><!-- end chart-item -->
+            </div><!-- end col-lg-6 -->
+            <div class="col-lg-6">
+                <canvas id="result-chart" height="180"></canvas>
+                <div class="line-legend">
+                    <ul class="chart-legend">
+                        <li><span class="legend__one"></span>business</li>
+                        <li><span class="legend__two"></span>others</li>
                     </ul>
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade show active" id="tab4">
-                            <div class="row">
-                                <div class="col-lg-4 col-sm-6">
-                                    <div class="package-content">
-                                        <h4 class="package__title">
-                                            <span>maximum</span>
-                                            return of $5,500 <span>for</span>
-                                        </h4>
-                                        <div class="price__box">
-                                            <span class="currency"><i class="fa fa-dollar-sign"></i></span>
-                                            <span class="price__price">500</span>
-                                        </div>
-                                        <h4 class="package__subtitle mb-5">
-                                            $30 gift bonus
-                                        </h4>
-                                        <h4 class="package__subtitle m-2">
-                                            investment duration:
-                                        </h4>
-                                        <h4 class="package__subtitle mb-4">
-                                            7 days
-                                        </h4>
-                                        <a href="#" class="order__btn">invest now</a>
-                                    </div><!-- end package-content -->
-                                </div><!-- end col-lg-4 -->
-                                <div class="col-lg-4 col-sm-6">
-                                    <div class="package-content">
-                                        <h4 class="package__title">
-                                            <span>maximum</span>
-                                            return of $10,500 <span>for</span>
-                                        </h4>
-                                        <div class="price__box">
-                                            <span class="currency"><i class="fa fa-dollar-sign"></i></span>
-                                            <span class="price__price">1000</span>
-                                        </div>
-                                        <h4 class="package__subtitle mb-5">
-                                            $30 gift bonus
-                                        </h4>
-                                        <h4 class="package__subtitle m-2">
-                                            investment duration:
-                                        </h4>
-                                        <h4 class="package__subtitle mb-4">
-                                            7 days
-                                        </h4>
-                                        <a href="#" class="order__btn">invest now</a>
-                                    </div><!-- end package-content -->
-                                </div><!-- end col-lg-4 -->
-                                <div class="col-lg-4 col-sm-6">
-                                    <div class="package-content">
-                                        <h4 class="package__title">
-                                            <span>maximum</span>
-                                            return of $30,000 <span>for</span>
-                                        </h4>
-                                        <div class="price__box">
-                                            <span class="currency"><i class="fa fa-dollar-sign"></i></span>
-                                            <span class="price__price">3000</span>
-                                        </div>
-                                        <h4 class="package__subtitle mb-5">
-                                            $30 gift bonus
-                                        </h4>
-                                        <h4 class="package__subtitle m-2">
-                                            investment duration:
-                                        </h4>
-                                        <h4 class="package__subtitle mb-4">
-                                            7 days
-                                        </h4>
-                                        <a href="#" class="order__btn">invest now</a>
-                                    </div><!-- end package-content -->
-                                </div><!-- end col-lg-4 -->
-                            </div>
-                        </div><!-- end tab-pane -->
-
-                        <div role="tabpanel" class="tab-pane fade" id="tab5">
-                            <div class="row">
-                                <div class="col-lg-4 col-sm-6">
-                                    <div class="package-content">
-                                        <h4 class="package__title">
-                                            <span>maximum</span>
-                                            return of $50,000 <span>for</span>
-                                        </h4>
-                                        <div class="price__box">
-                                            <span class="currency"><i class="fa fa-dollar-sign"></i></span>
-                                            <span class="price__price">5000</span>
-                                        </div>
-                                        <h4 class="package__subtitle mb-5">
-                                            $100 gift bonus
-                                        </h4>
-                                        <h4 class="package__subtitle m-2">
-                                            investment duration:
-                                        </h4>
-                                        <h4 class="package__subtitle mb-4">
-                                            7 days
-                                        </h4>
-                                        <a href="#" class="order__btn">invest now</a>
-                                    </div><!-- end package-content -->
-                                </div><!-- end col-lg-4 -->
-                                <div class="col-lg-4 col-sm-6">
-                                    <div class="package-content">
-                                        <h4 class="package__title">
-                                            <span>maximum</span>
-                                            return of $75,000 <span>for</span>
-                                        </h4>
-                                        <div class="price__box">
-                                            <span class="currency"><i class="fa fa-dollar-sign"></i></span>
-                                            <span class="price__price">7,500</span>
-                                        </div>
-                                        <h4 class="package__subtitle mb-5">
-                                            $500 gift bonus
-                                        </h4>
-                                        <h4 class="package__subtitle m-2">
-                                            investment duration:
-                                        </h4>
-                                        <h4 class="package__subtitle mb-4">
-                                            7 days
-                                        </h4>
-                                        <a href="#" class="order__btn">invest now</a>
-                                    </div><!-- end package-content -->
-                                </div><!-- end col-lg-4 -->
-                                <div class="col-lg-4 col-sm-6">
-                                    <div class="package-content">
-                                        <h4 class="package__title">
-                                            <span>maximum</span>
-                                            return of $100,000 <span>for</span>
-                                        </h4>
-                                        <div class="price__box">
-                                            <span class="currency"><i class="fa fa-dollar-sign"></i></span>
-                                            <span class="price__price">10,000</span>
-                                        </div>
-                                        <h4 class="package__subtitle mb-5">
-                                            $500 gift bonus
-                                        </h4>
-                                        <h4 class="package__subtitle m-2">
-                                            investment duration:
-                                        </h4>
-                                        <h4 class="package__subtitle mb-4">
-                                            7 days
-                                        </h4>
-                                        <a href="#" class="order__btn">invest now</a>
-                                    </div><!-- end package-content -->
-                                </div><!-- end col-lg-4 -->
-                            </div>
-                        </div><!-- end tab-pane -->
-                    </div><!-- end tab-content -->
-                </div><!-- end package-tab-content -->
-            </div><!-- end col-lg-12 -->
+                </div><!-- end line-legend -->
+            </div><!-- end col-lg-6 -->
         </div><!-- end row -->
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="divider">
-                    <span class="divider__circle"></span>
-                </div><!-- end divider -->
-            </div><!-- end col-lg-12 -->
+        <div class="row chart-wrapper chart-wrapper2">
+            <div class="col-lg-5">
+                <canvas id="doughutChart"></canvas>
+                <div class="line-legend">
+                    <ul class="chart-legend">
+                        <li><span class="legend__one"></span>bitcoin</li>
+                        <li><span class="legend__two"></span>litecoin</li>
+                        <li><span class="legend__three"></span>ripple</li>
+                    </ul>
+                </div><!-- end line-legend -->
+            </div><!-- end col-lg-6 -->
+            <div class="col-lg-6 ml-auto">
+                <div class="chart-item">
+                    <div class="sec-heading">
+                        <div class="heading-circle"></div>
+                        <p class="sec__meta">our growth</p>
+                        <h2 class="sec__title">Building an Ecosystem for Blockchain.</h2>
+                        <ul class="sec__list">
+                            <li><i class="fa fa-check check-one"></i>
+                                Sign through an iterative mind mapping ideas
+                            </li>
+                            <li><i class="fa fa-check check-two"></i>
+                                Instant and secure transactions
+                            </li>
+                            <li><i class="fa fa-check check-three"></i>
+                                Decentralized, instant and secure payments
+                            </li>
+                        </ul>
+                        <a href="#" class="theme-btn">read more </a>
+                    </div><!-- end sec-heading -->
+                </div><!-- end chart-item -->
+            </div><!-- end col-lg-6 -->
         </div><!-- end row -->
     </div><!-- end container -->
-</section><!-- end package-area -->
+</section><!-- end chart-area -->
 <!-- ================================
-       START PACKAGE AREA
+       START CHART AREA
 ================================= -->
 
 <!-- ================================
@@ -473,15 +357,18 @@
 <!-- end back-to-top -->
 
 <!-- Template JS Files -->
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/waypoint.min.js"></script>
-<script src="js/jquery.counterup.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/smooth-scrolling.js"></script>
-<script src="js/jquery-nice-select.js"></script>
-<script src="js/main.js"></script>
+<script src="/public/js/jquery.min.js"></script>
+<script src="/public/js/popper.min.js"></script>
+<script src="/public/js/bootstrap.min.js"></script>
+<script src="/public/js/owl.carousel.min.js"></script>
+<script src="/public/js/chart.js"></script>
+<script src="/public/js/result-chart.js"></script>
+<script src="/public/js/doughutchart.js"></script>
+<script src="/public/js/waypoint.min.js"></script>
+<script src="/public/js/jquery.counterup.min.js"></script>
+<script src="/public/js/jquery.magnific-popup.min.js"></script>
+<script src="/public/js/smooth-scrolling.js"></script>
+<script src="/public/js/jquery-nice-select.js"></script>
+<script src="/public/js/main.js"></script>
 </body>
 </html>
