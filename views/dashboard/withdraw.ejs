@@ -1,0 +1,68 @@
+<%- include('../includes/dashboard-header.ejs') %>
+
+
+    <!--main content wrapper-->
+    <div class="content-wrapper">
+
+        <section class="withdraw-section">
+            <div class="withdraw-container">
+                <div class="withdraw-card">
+                    <div>
+                        <h1 class="withdraw-title">Payment will be sent through your selected method.</h1>
+                    </div>
+                    
+                    <div class="withdraw-option">
+                        <div class="withdraw-btc">
+                            <a href="./withdraw-btc.html" class="withdraw-link">
+                                <span class="withdraw-image">
+                                    <img src="/images/bank-img.png" class="withdraw-img" alt="">
+                                </span>
+                                withdraw to bank
+                            </a>
+                        </div>
+                        <div class="withdraw-btc">
+                            <a href="./withdraw-btc.html" class="withdraw-link">
+                                <span class="withdraw-image">
+                                    <img src="/images/btc-img.png" class="withdraw-img" alt="">
+                                </span>
+                                withdraw to bitcoin wallet
+                            </a>
+                        </div>
+                        <div class="withdraw-bch">
+                            <a href="" class="withdraw-link">
+                                <span class="withdraw-image">
+                                    <img src="/images/BCH-img.png" class="withdraw-img" alt="">
+                                </span>
+                                withdraw to bitcoin cash wallet
+                            </a>
+                        </div>
+                        <div class="withdraw-eth">
+                            <a href="" class="withdraw-link">
+                                <span class="withdraw-image">
+                                    <img src="/images/ETH-img.png" class="withdraw-img" alt="">
+                                </span>
+                                withdraw to etherum wallet
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--footer-->
+        <footer class="sticky-footer">
+            <div class="container">
+                <div class="text-center">
+                    <small>Copyright &copy; 2020</small>
+                </div>
+            </div>
+        </footer>
+        <!--/footer-->
+    </div>
+    <!--/main content wrapper-->
+
+    <!--right sidebar-->
+    <%- include('../includes/dashboard-right-sidebar.ejs') %>
+    <!--basic scripts-->
+    <%- include('../includes/dashboard-script.ejs') %>
+

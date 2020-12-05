@@ -1,7 +1,7 @@
 //jshint esversion: 6
-const path = require('path');
+const path = require("path");
 const express = require('express');
-const bodyParser = require('body-parser');
+const bodyParser = require("body-parser");
 const ejs = require('ejs');
 const dotenv = require('dotenv')
 
@@ -9,7 +9,7 @@ const app = express();
 
 app.set('view engine', 'ejs');
 app.set('views');
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname)));
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -20,25 +20,11 @@ dotenv.config({ path: './config/config.env'});
 
 
 //Routes
-// const mainsiteRoutes = require('./routes/mainsite');
-// const dashboardRoutes = require('./routes/dashboard');
+const mainsiteRoutes = require('./routes/mainsite');
+const dashboardRoutes = require('./routes/dashboard');
 
-// app.use(mainsiteRoutes);
-
-// const router = express.Router();
-
-// router.get('/', (res, req) => {
-//     res.render('index')
-// })
-
-
-
-
-
-
-
-
-
+app.use(mainsiteRoutes);
+app.use(dashboardRoutes);
 
 
 

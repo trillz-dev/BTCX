@@ -7,43 +7,44 @@
     <meta name="author" content="Mosaddek">
 
     <!--favicon icon-->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="icon" type="image/png" href="/public/images/favicon.png">
 
-    <title>Crypto Dashboard</title>
+    <title><%= pageTitle %></title>
 
     <!--web fonts-->
     <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 
     <!--bootstrap styles-->
-    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!--icon font-->
-    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/vendor/dashlab-icon/dashlab-icon.css" rel="stylesheet">
-    <link href="/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-    <link href="/vendor/themify-icons/css/themify-icons.css" rel="stylesheet">
-    <link href="/vendor/weather-icons/css/weather-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link href="/public/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/public/vendor/dashlab-icon/dashlab-icon.css" rel="stylesheet">
+    <link href="/public/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="/public/vendor/themify-icons/css/themify-icons.css" rel="stylesheet">
+    <link href="/public/vendor/weather-icons/css/weather-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/font-awesome.css">
 
 
     <!--custom scrollbar-->
-    <link href="/vendor/m-custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/public/vendor/m-custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
 
     <!--jquery dropdown-->
-    <link href="/vendor/jquery-dropdown-master/jquery.dropdown.css" rel="stylesheet">
+    <link href="/public/vendor/jquery-dropdown-master/jquery.dropdown.css" rel="stylesheet">
 
     <!--jquery ui-->
-    <link href="/vendor/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <link href="/public/vendor/jquery-ui/jquery-ui.min.css" rel="stylesheet">
 
     <!--iCheck-->
-    <link href="/vendor/icheck/skins/all.css" rel="stylesheet">
+    <link href="/public/vendor/icheck/skins/all.css" rel="stylesheet">
 
     <!--amchart-->
-    <link href="/vendor/amcharts/plugins/export/export.css" rel="stylesheet"/>
+    <link href="/public/vendor/amcharts/plugins/export/export.css" rel="stylesheet"/>
 
     <!--custom styles-->
-    <link href="/css/main.css" rel="stylesheet">
+    <link href="/public/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/dashboard.css">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -59,7 +60,7 @@
 
         <!--brand name-->
         <a class="navbar-brand" href="#" data-jq-dropdown="#jq-dropdown-1">
-            <img class="pr-3 float-left" src="/images/logo-icon.png" srcset="/images/logo-icon@2x.png 2x"  alt=""/>
+            <img class="pr-3 float-left" src="/public/images/logo-icon.png" srcset="/images/logo-icon@2x.png 2x"  alt=""/>
             <div class="float-left pt-3">
                 <div>Dashboard</div>
             </div>
@@ -93,34 +94,34 @@
                 </li>
 
                 <li class="nav-item dash-nav-item active">
-                    <a class="dash-nav-link nav-link" href="/dashboard/main.html">
+                    <a class="dash-nav-link nav-link" href="/main">
                         <i class="dash-nav-link-icon vl_dashboard"></i>
                         <span class="nav-link-text">Dashboard </span>
                     </a>
                 </li>
 
                 <li class="nav-item dash-nav-item">
-                    <a class="dash-nav-link nav-link" href="/dashboard/investment.html">
+                    <a class="dash-nav-link nav-link" href="/investment">
                         <i class="dash-nav-link-icon vl_slider-h-range"></i>
                         <span class="nav-link-text">Investment</span>
                     </a>
                 </li>
                 <li class="nav-item dash-nav-item">
-                    <a class="dash-nav-link nav-link" href="/dashboard/transaction.html">
+                    <a class="dash-nav-link nav-link" href="/transaction">
                         <i class="dash-nav-link-icon vl_bond"></i>
                         <span class="nav-link-text">Transactions</span>
                     </a>
                 </li>
 
                 <!-- <li class="nav-item dash-nav-item">
-                    <a class="nav-ldash-nav-link ink" href="calendar-external-events.html">
+                    <a class="nav-ldash-nav-link ink" href="calendar-external-events">
                         <i class="vl_cadash-nav-link-icon lendar"></i>
                         <span class="nav-link-text">Calendar <span class="badge badge-primary">2</span> </span>
                     </a>
                 </li> -->
 
                 <li class="nav-item dash-nav-item">
-                    <a class="dash-nav-link nav-link" href="/dashboard/deposit.html">
+                    <a class="dash-nav-link nav-link" href="/deposit">
                         <i class="dash-nav-link-icon">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-credit-card-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0V4z"/>
@@ -132,7 +133,7 @@
                 </li>
 
                 <li class="nav-item dash-nav-item">
-                    <a class="dash-nav-link nav-link" href="/dashboard/withdraw.html">
+                    <a class="dash-nav-link nav-link" href="/withdraw">
                         <i class="dash-nav-link-icon">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-credit-card" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
@@ -144,7 +145,7 @@
                 </li>
 
                 <li class="nav-item dash-nav-item">
-                    <a class="dash-nav-link nav-link" href="/dashboard/settings.html">
+                    <a class="dash-nav-link nav-link" href="/settings">
                         <i class="dash-nav-link-icon">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sliders" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z"/>
@@ -155,7 +156,7 @@
                 </li>
 
                 <li class="nav-item dash-nav-item">
-                    <a class="dash-nav-link nav-link" href="/dashboard/support.html">
+                    <a class="dash-nav-link nav-link" href="/support">
                         <i class="dash-nav-link-icon">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chat-left-text-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
@@ -166,7 +167,7 @@
                 </li>
 
                 <li class="nav-item dash-nav-item">
-                    <a class="dash-nav-link nav-link" href="/login.html">
+                    <a class="dash-nav-link nav-link" href="/login">
                         <i class="dash-nav-link-icon fa fa-sign-out-alt"></i>
                         <span class="nav-link-text">Sign Out</span>
                     </a>
@@ -204,7 +205,7 @@
                         <div class="dropdown-divider mb-0"></div>
                         <a class="dropdown-item border-bottom msg-unread" href="#">
                             <div class="float-left notificaton-thumb">
-                                <img class="rounded-circle" src="/images/avatar/avatar4.jpg" alt=""/>
+                                <img class="rounded-circle" src="/public/images/avatar/avatar4.jpg" alt=""/>
                             </div>
                             <span class="weight500">Andrew Flinton</span>
                             <span class="small float-right text-muted">08:30 AM</span>
@@ -216,7 +217,7 @@
 
                         <a class="dropdown-item border-bottom msg-unread" href="#">
                             <div class="float-left notificaton-thumb">
-                                <img class="rounded-circle" src="/images/avatar/avatar2.jpg" alt=""/>
+                                <img class="rounded-circle" src="/public/images/avatar/avatar2.jpg" alt=""/>
                             </div>
                             <span class="weight500">John Doe</span>
                             <span class="small float-right text-muted">10:28 AM</span>
@@ -228,7 +229,7 @@
 
                         <a class="dropdown-item border-bottom" href="#">
                             <div class="float-left notificaton-thumb">
-                                <img class="rounded-circle" src="/images/avatar/avatar3.jpg" alt=""/>
+                                <img class="rounded-circle" src="/public/images/avatar/avatar3.jpg" alt=""/>
                             </div>
                             <span class="weight500">Dash Don</span>
                             <span class="small float-right text-muted">07:12 PM</span>
@@ -240,7 +241,7 @@
 
                         <a class="dropdown-item border-bottom" href="#">
                             <div class="float-left notificaton-thumb">
-                                <img class="rounded-circle" src="/images/avatar/avatar1.jpg" alt=""/>
+                                <img class="rounded-circle" src="/public/images/avatar/avatar1.jpg" alt=""/>
                             </div>
                             <span class="weight500">dkmosa</span>
                             <span class="small float-right text-muted">12:10 PM</span>
@@ -311,7 +312,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle mr-lg-3" id="userNav" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="user-thumb">
-                            <img class="rounded-circle" src="/images/avatar/avatar1.jpg" alt=""/>
+                            <img class="rounded-circle" src="/public/images/avatar/avatar1.jpg" alt=""/>
                         </div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userNav">
@@ -320,7 +321,7 @@
                         <a class="dropdown-item" href="#">Inbox <span class="badge badge-primary">3</span></a>
                         <a class="dropdown-item" href="#">Message <span class="badge badge-success">5</span></a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="login.html">Sign Out</a>
+                        <a class="dropdown-item" href="login">Sign Out</a>
                     </div>
                 </li>
                 <li class="nav-item">

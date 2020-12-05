@@ -1,0 +1,71 @@
+<%- include('../includes/dashboard-header.ejs') %>
+
+
+    <!--main content wrapper-->
+    <div class="content-wrapper">
+
+        <section class="main_transaction">
+            <div class="main_transaction-container">
+                <div class="transaction-header">
+                    <div>
+                        <h1 class="transaction-title">Transaction history</h1>
+                    </div>
+                </div>
+        
+                <div class="table-responsive-sm">
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Transaction ID</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Date</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Deposit</td>
+                            <td>Successful</td>
+                            <td>$500</td>
+                            <td>11-21-2020</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Deposit</td>
+                            <td>Successful</td>
+                            <td>$5000</td>
+                            <td>11-23-2020</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Withdrawal</td>
+                            <td>Pending</td>
+                            <td>$15000</td>
+                            <td>12-3-2020</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!--footer-->
+        <footer class="sticky-footer">
+            <div class="container">
+                <div class="text-center">
+                    <small>Copyright &copy; 2020</small>
+                </div>
+            </div>
+        </footer>
+        <!--/footer-->
+    </div>
+    <!--/main content wrapper-->
+
+    <!--right sidebar-->
+    <%- include('../includes/dashboard-right-sidebar.ejs') %>
+
+    <!--basic scripts-->
+    <%- include('../includes/dashboard-script.ejs') %>
+
