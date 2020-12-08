@@ -1,8 +1,45 @@
+const bodyParser = require('body-parser');
+const request = require('request');
+
+
+
+
 exports.home = (req, res, next) => {
+    request('https://coinlib.io/api/v1/coinlist?key=9b79bb5181f4b204', (error, response, body) => {
+        
+        let data = JSON.parse(body);
+        let btcData = data.coins[0];
+        let ETH = data.coins[1];
+        let XRP = data.coins[2];
+        let LTC = data.coins[3];
+
+        let btcPrice = Math.round(btcData.price)
+        // let btcFixed = Math.round(btcPrice)
+        let btcMarket = btcData.market_cap
+        let btc24 = btcData.volume_24h
+
+    // let xhr = new XMLHttpRequest();
+
+    // xhr.open('GET', 'https://coinlib.io/api/v1/coinlist?key=9b79bb5181f4b204', true)
+
+    // xhr.onload = () => {
+    //     if (this.status == 200) {
+    //         let data = JSON.parse(this.responseText);
+
+    //         console.log(data);
+    //     }
+    // }
+
     res.render('mainsite/index', {
         pageTitle: 'Homepage',
-        path: '/'
+        path: '/',
+        btcPrice,
+        btcMarket,
+        btc24
     });
+
+});
+
 };
 
 exports.about = (req, res, next) => {

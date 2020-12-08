@@ -10,6 +10,8 @@ const router = express.Router();
 
 router.get('/', mainsiteController.home);
 
+router.post('/', mainsiteController.home)
+
 router.get('/about', mainsiteController.about);
 
 router.get('/service', mainsiteController.service);

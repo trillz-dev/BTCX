@@ -26,6 +26,27 @@ exports.deposit = (req, res, next) => {
     });
 };
 
+exports.btcDeposit = (req, res, next) => {
+    res.render('dashboard/btc-deposit', {
+        pageTitle: 'Deposit',
+        path: '/btc-deposit'
+    });
+};
+
+exports.bchDeposit = (req, res, next) => {
+    res.render('dashboard/bch-deposit', {
+        pageTitle: 'Deposit',
+        path: '/bch-deposit'
+    });
+};
+
+exports.ethDeposit = (req, res, next) => {
+    res.render('dashboard/eth-deposit', {
+        pageTitle: 'Deposit',
+        path: '/eth-deposit'
+    });
+};
+
 exports.withdraw = (req, res, next) => {
     res.render('dashboard/withdraw', {
         pageTitle: 'Withdraw',
@@ -47,9 +68,9 @@ exports.support = (req, res, next) => {
     });
 };
 
-// exports.signout = (req, res, next) => {
-//     res.render('dashboard/signout', {
-//         pageTitle: 'Dashboard',
-//         path: '/signout'
-//     });
-// };
+exports.login = (req, res, next) => {
+    res.render('mainsite/sign-in', 200, {
+        // pageTitle: 'Sign In',
+        // path: '/login'
+    });
+};
