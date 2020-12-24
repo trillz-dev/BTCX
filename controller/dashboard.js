@@ -61,6 +61,13 @@ exports.settings = (req, res, next) => {
     });
 };
 
+exports.settingSecurity = (req, res, next) => {
+    res.render('dashboard/settings-security', {
+        pageTitle: 'Settings',
+        path: '/settings-security'
+    });
+};
+
 exports.support = (req, res, next) => {
     res.render('dashboard/support', {
         pageTitle: 'Support',
@@ -69,8 +76,8 @@ exports.support = (req, res, next) => {
 };
 
 exports.login = (req, res, next) => {
-    res.render('mainsite/sign-in', 200, {
-        // pageTitle: 'Sign In',
-        // path: '/login'
+    res.redirect('mainsite/login', {
+        pageTitle: 'Sign In',
+        path: '/sign-in'
     });
 };

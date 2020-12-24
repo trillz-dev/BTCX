@@ -5,40 +5,50 @@ const request = require('request');
 
 
 exports.home = (req, res, next) => {
-    request('https://coinlib.io/api/v1/coinlist?key=9b79bb5181f4b204', (error, response, body) => {
+//     request('https://coinlib.io/api/v1/coinlist?key=9b79bb5181f4b204', (error, response, body) => {
         
-        let data = JSON.parse(body);
-        let btcData = data.coins[0];
-        let ETH = data.coins[1];
-        let XRP = data.coins[2];
-        let LTC = data.coins[3];
+//         let data = JSON.parse(body);
+//         let btcData = data.coins[0];
+//         let ETH = data.coins[1];
+//         let XRP = data.coins[2];
+//         let LTC = data.coins[3];
 
-        let btcPrice = Math.round(btcData.price)
-        // let btcFixed = Math.round(btcPrice)
-        let btcMarket = btcData.market_cap
-        let btc24 = btcData.volume_24h
+//         let btcPrice = Math.round(btcData.price)
+//         // let btcFixed = Math.round(btcPrice)
+//         let btcMarket = btcData.market_cap
+//         let btc24 = btcData.volume_24h
+//         console.log (btcData)
 
-    // let xhr = new XMLHttpRequest();
+// });
 
-    // xhr.open('GET', 'https://coinlib.io/api/v1/coinlist?key=9b79bb5181f4b204', true)
+    // let calcButton = document.getElementById('calcButton');
+    // calcButton.addEventListener('click', loadPrice);
 
-    // xhr.onload = () => {
-    //     if (this.status == 200) {
-    //         let data = JSON.parse(this.responseText);
+    // function loadPrice () {
+    //     let xhr = new XMLHttpRequest();
 
-    //         console.log(data);
+    //     xhr.onload = () => {
+    //         if (this.status == 200) {
+    //             let data = JSON.parse(this.responseText);
+        
+    //             console.log('this part is connected');
+    
+    //         }
     //     }
-    // }
+
+    //     xhr.open('GET', 'https://coinlib.io/api/v1/coin?key=9b79bb5181f4b204', true)
+    //     xhr.send();
+    // }    
 
     res.render('mainsite/index', {
         pageTitle: 'Homepage',
         path: '/',
-        btcPrice,
-        btcMarket,
-        btc24
+        // btcPrice,
+        // btcMarket,
+        // btc24
     });
 
-});
+// });
 
 };
 

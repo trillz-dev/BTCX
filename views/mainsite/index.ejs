@@ -240,7 +240,7 @@
                    <div class="flaticon__icon">
                        <span class="flaticon-014-bitcoin-13"></span>
                    </div>
-                    <h3 class="hiw__title"><a href="./service.html">safe and secure</a></h3>
+                    <h3 class="hiw__title"><a href="./service">safe and secure</a></h3>
                     <p class="hiw__desc">
                         We have put in place a standard and unbreakable security system for you.
                     </p>
@@ -262,7 +262,7 @@
                     <div class="flaticon__icon">
                         <span class="flaticon-001-bitcoin-20"></span>
                     </div>
-                    <h3 class="hiw__title"><a href="./service.html">payment options</a></h3>
+                    <h3 class="hiw__title"><a href="./service">payment options</a></h3>
                     <p class="hiw__desc">
                         You won't have to worry about your withdrawal or deposit because everything about us is instant and be rest assured, you are secured. 
                     </p>
@@ -273,7 +273,7 @@
                     <div class="flaticon__icon">
                         <span class="flaticon-002-bitcoin-19"></span>
                     </div>
-                    <h3 class="hiw__title"><a href="./service.html">stable and profitable</a></h3>
+                    <h3 class="hiw__title"><a href="./service">stable and profitable</a></h3>
                     <p class="hiw__desc">
                         With any of your preferred investment plan, you make up to 10x of your deposit within 48hours to 7 Days depending on your investment plan.
                     </p>
@@ -284,7 +284,7 @@
                     <div class="flaticon__icon">
                         <span class="flaticon-004-saving"></span>
                     </div>
-                    <h3 class="hiw__title"><a href="./service.html">multi currency support</a></h3>
+                    <h3 class="hiw__title"><a href="./service">multi currency support</a></h3>
                     <p class="hiw__desc">
                         Yes! You don't have to worry about your currency, we accept every currency.
                     </p>
@@ -295,7 +295,7 @@
                     <div class="flaticon__icon">
                         <span class="flaticon-029-bitcoin-6"></span>
                     </div>
-                    <h3 class="hiw__title"><a href="./service.html">24/7 customer support</a></h3>
+                    <h3 class="hiw__title"><a href="./service">24/7 customer support</a></h3>
                     <p class="hiw__desc">
                         We are always here for you. Our customer support is second to none. You can also use the live chat to reach out to us more quickly. 
                     </p>
@@ -305,7 +305,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="button-shared-wrap">
-                    <a href="./service.html" class="theme-btn">browse all services</a>
+                    <a href="./service" class="theme-btn">browse all services</a>
                 </div><!-- end button-shared-wrap -->
             </div><!-- end col-lg-12 -->
         </div><!-- end row -->
@@ -349,10 +349,10 @@
                                     <!-- <option value="5">Monero</option> -->
                                 </select>
                             </div>
-                            <input type="text" class="form-control" id="amtBTC" value="1">
+                            <input type="text" class="form-control" id="amtBTC" placeholder="1">
                         </div><!-- end input-group -->
                         <div class="input-group-box">
-                            <input type="text" class="form-control decrement" id="amtUSD" value="6429.2">
+                            <input type="text" class="form-control decrement" id="amtUSD" value="<&=ember.btcPrice%>">
                             <div class="select-option crypto-price">
                                 <select>
                                     <option value="USD">US Dollar</option>
@@ -365,8 +365,12 @@
                                 </select>
                             </div>
                         </div><!-- end input-group -->
+                        <div class="col-lg-12 mt-5">
+                            <!-- <button class="" id="calcButton">Check</button> -->
+                        </div><!-- end col-lg-12 -->
                     </div><!-- end form-inline -->
                 </div><!-- end crypto-calculator -->
+                <!-- <div style="width: 400px; height:335px; background-color: #FAFAFA; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; block-size:335px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F;margin: 0;width: 400px;padding:1px;padding: 0px; margin: 0px;"><div style="height:315px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=converter&theme=light" width="400" height="310px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;by Coinlib</div></div> -->
             </div><!-- end col-lg-8 -->
         </div><!-- end row -->
     </div><!-- end container -->
@@ -375,196 +379,15 @@
      END CALCULATOR AREA
 ================================= -->
 
-<section class="marketprice-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div class="sec-heading text-center">
-                    <div class="heading-circle m-x-auto"></div>
-                    <p class="sec__meta">check out market depth</p>
-                    <h2 class="sec__title">Cryptocurrency Prices.</h2>
-                </div><!-- end sec-heading -->
-            </div><!-- end col-lg-12 -->
-        </div><!-- end row -->
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="coinprice-table table-responsive">
-                    <table class="table table-bordered text-left">
-                        <thead>
-                        <tr>
-                            <th>cryptocurrency</th>
-                            <th>Price</th>
-                            <th>Market Cap</th>
-                            <th>24h Volume</th>
-                            <th>Supply</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <table class="inner-table">
-                                    <tbody>
-                                    <tr>
-                                        <td><img src="/public/images/bitcoin-symble.png" class="img-responsive" alt="table-img"></td>
-                                        <td>
-                                            <p class="currency__title">Bitcoin(BTC)</p>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td>
-                                <p>$<%= btcPrice %></p>
-                            </td>
-                            <td>
-                                <p><%= btcMarket %></p>
-                            </td>
-                            <td>
-                                <p><%= btc24 %></p>
-                            </td>
-                            <td>
-                                <p>923,629</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table class="inner-table">
-                                    <tbody>
-                                    <tr>
-                                        <td><img src="/public/images/ethereum-symble.png" class="img-responsive" alt="table-img"></td>
-                                        <td>
-                                            <p class="currency__title">ethereum(ETH)</p>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td>
-                                <p>407.14</p>
-                            </td>
-                            <td>
-                                <p>16.17%</p>
-                            </td>
-                            <td>
-                                <p>1,223,367 ETH</p>
-                            </td>
-                            <td>
-                                <p>663,133</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table class="inner-table">
-                                    <tbody>
-                                    <tr>
-                                        <td><img src="/public/images/litecoin_symble.png" class="img-responsive" alt="table-img"></td>
-                                        <td>
-                                            <p class="currency__title">litecoin(LTC)</p>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td>
-                                <p>7.47</p>
-                            </td>
-                            <td>
-                                <p>-1.09</p>
-                            </td>
-                            <td>
-                                <p>3362 LTC</p>
-                            </td>
-                            <td>
-                                <p>427,132</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table class="inner-table">
-                                    <tbody>
-                                    <tr>
-                                        <td><img src="/public/images/ripple-symble.png" class="img-responsive" alt="table-img"></td>
-                                        <td>
-                                            <p class="currency__title">ripple(XRP)</p>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td>
-                                <p>0.22</p>
-                            </td>
-                            <td>
-                                <p>20.80%</p>
-                            </td>
-                            <td>
-                                <p>211,418,299 XRP</p>
-                            </td>
-                            <td>
-                                <p>719,280</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table class="inner-table">
-                                    <tbody>
-                                    <tr>
-                                        <td><img src="/public/images/veritaseum-symble.png" class="img-responsive" alt="table-img"></td>
-                                        <td>
-                                            <p class="currency__title">veritaseum(VERI)</p>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td>
-                                <p>84.22</p>
-                            </td>
-                            <td>
-                                <p>-14.56%</p>
-                            </td>
-                            <td>
-                                <p>36 VERI</p>
-                            </td>
-                            <td>
-                                <p>218,887</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table class="inner-table">
-                                    <tbody>
-                                    <tr>
-                                        <td><img src="/public/images/monero-symble.png" class="img-responsive" alt="table-img"></td>
-                                        <td>
-                                            <p class="currency__title">monero(XMR)</p>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td>
-                                <p>87.77</p>
-                            </td>
-                            <td>
-                                <p>20.44%</p>
-                            </td>
-                            <td>
-                                <p>2,218,288 LTC</p>
-                            </td>
-                            <td>
-                                <p>719,288</p>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div><!-- end table -->
-            </div><!-- end col-lg-12 -->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</section><!-- end marketprice-area -->
+
 <!-- ================================
        START MARKETPRICE AREA
+================================= -->
+<section class="marketprice-area" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+    <div style="height:433px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F; padding: 0px; margin: 0px; width: 80%;"><div style="height:413px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=6&pref_coin_id=1505&graph=yes" width="100%" height="409px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px"></div></div>
+</section><!-- end marketprice-area -->
+<!-- ================================
+       END MARKETPRICE AREA
 ================================= -->
 
 <!-- ================================
@@ -984,19 +807,42 @@
 
 
 <!-- JS Files -->
+<!-- <script>
+    document.getElementById('calcButton').addEventListener('Click', loadPrice);
+
+    function loadPrice () {
+        let xhr = new XMLHttpRequest();
+        
+        xhr.open('GET', 'https://coinlib.io/api/v1/coin?key=9b79bb5181f4b204', true)
+        
+        xhr.onload = () => {
+            if (this.status == 200) {
+                let data = JSON.parse(this.responseText);
+        
+                console.log('this part is connected');
+
+            }
+        }
+
+        xhr.send();
+    }
+
+</script> -->
 <script src="/public/js/jquery.min.js"></script>
 <script src="/public/js/popper.min.js"></script>
 <script src="/public/js/bootstrap.min.js"></script>
-<script src="/public/js/socket.io.js"></script>
+<script src="/socket.io/socket.io.js"></script>
 <script src="/public/js/owl.carousel.min.js"></script>
-<script src="/public/js/chart.js"></script>
-<script src="/public/js/result-chart.js"></script>
-<script src="/public/js/doughutchart.js"></script>
+<!-- <script src="/public/js/chart.js"></script> -->
+<!-- <script src="/public/js/result-chart.js"></script> -->
+<!-- <script src="/public/js/doughutchart.js"></script> -->
 <script src="/public/js/waypoint.min.js"></script>
 <script src="/public/js/jquery.counterup.min.js"></script>
 <script src="/public/js/jquery.magnific-popup.min.js"></script>
 <script src="/public/js/smooth-scrolling.js"></script>
-<script src="/public/js/calculate-script.js"></script>
+<!-- <script src="/controller/mainsite.js"></script> -->
+<!-- <script src="/public/js/calculate-script.js"></script> -->
+<!-- <script src="/public/js/index-chart.js"></script> -->
 <script src="/public/js/jquery-nice-select.js"></script>
 <script src="/public/js/main.js"></script>
 </body>

@@ -25,9 +25,11 @@ router.get('/withdraw', dashboardController.withdraw);
 
 router.get('/settings', dashboardController.settings);
 
+router.get('/settings-security', dashboardController.settingSecurity);
+
 router.get('/support', dashboardController.support);
 
-router.get('/login', dashboardController.login);
+router.get('/sign-in', dashboardController.login);
 
 
 
