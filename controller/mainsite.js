@@ -21,25 +21,6 @@ exports.home = (req, res, next) => {
 
 // });
 
-    // let calcButton = document.getElementById('calcButton');
-    // calcButton.addEventListener('click', loadPrice);
-
-    // function loadPrice () {
-    //     let xhr = new XMLHttpRequest();
-
-    //     xhr.onload = () => {
-    //         if (this.status == 200) {
-    //             let data = JSON.parse(this.responseText);
-        
-    //             console.log('this part is connected');
-    
-    //         }
-    //     }
-
-    //     xhr.open('GET', 'https://coinlib.io/api/v1/coin?key=9b79bb5181f4b204', true)
-    //     xhr.send();
-    // }    
-
     res.render('mainsite/index', {
         pageTitle: 'Homepage',
         path: '/',
