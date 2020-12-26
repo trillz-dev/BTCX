@@ -3400,7 +3400,7 @@ body {
     filter: url(#goo); }
     .wave-svg-box .gooeff .drop {
       fill: #fff;
-      xfill: #99000055;
+      /* xfill: #99000055; */
       animation: drop 8.3s linear infinite normal;
       stroke: var(#fff);
       transform: translateY(25px);

@@ -95,7 +95,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="row text-center mb-4">
+                            <!-- <div class="row text-center mb-4">
                                 <div class="col-4">
                                     <h4 class="mb-0">$120 </h4>
                                     <small class="text-muted text-uppercase">Last Price</small>
@@ -108,8 +108,9 @@
                                     <h4 class="mb-0">1234.5678 BTC</h4>
                                     <small class="text-muted text-uppercase">24 H Volume</small>
                                 </div>
-                            </div>
-                             <div id="candle_stick" style="height: 400px; "></div>
+                            </div> -->
+                             <!-- <div id="candle_stick" style="height: 400px; "></div> -->
+                             <div style="height:560px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 0px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #ffffff;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:540px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=chart&theme=light&coin_id=859&pref_coin_id=1505" width="100%" height="536px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;"></iframe></div></div>
                         </div>
                     </div>
                 </div>
@@ -119,79 +120,64 @@
                         <div class="card-header border-0">
                             <div class="custom-title-wrap bar-danger">
                                 <div class="custom-title">Data Tables Market</div>
-                                <div class="custom-post-title">Todays Currency price and changes</div>
+                                <div class="custom-post-title">Todays Currency Exchange and Changes</div>
                             </div>
                         </div>
                         <div class="card-body p-0 pt-4">
                             <div class="table-responsive">
                                 <table class="table">
-                                    <thead>
-                                    <tr>
-                                        <th scope="col">COIN</th>
-                                        <th scope="col">PRICE</th>
-                                        <th scope="col">CHANGE %</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <img class="mr-2" src="/images/crypto-icons/Golem.svg" width="16" alt=""/> <strong class="text-info">GOLEM</strong>
-                                        </td>
-                                        <td>$11.63</td>
-                                        <td>-5.91%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img class="mr-2" src="/images/crypto-icons/Bitcoin.svg" width="16" alt=""/> <strong class="text-warning">BTC</strong>
-                                        </td>
-                                        <td>$11,65.63</td>
-                                        <td>-16.23%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img class="mr-2" src="/images/crypto-icons/Litecoin.svg" width="16" alt=""/> <strong class="text-muted">LBC</strong>
-                                        </td>
-                                        <td>$875.00</td>
-                                        <td>-122.01</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img class="mr-2" src="/images/crypto-icons/Netko-coin.svg" width="16" alt=""/> <strong class="text-danger">NEO</strong>
-                                        </td>
-                                        <td>$123.43</td>
-                                        <td>-43.01%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img class="mr-2" src="/images/crypto-icons/Steem.svg" width="16" alt=""/> <strong class="text-info">STE</strong>
-                                        </td>
-                                        <td>$342.63</td>
-                                        <td>-9.00%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img class="mr-2" src="/images/crypto-icons/EOS.svg" width="16" alt=""/> <strong class="text-dark">EOS</strong>
-                                        </td>
-                                        <td>$1211.63</td>
-                                        <td>-15.91%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img class="mr-2" src="/images/crypto-icons/LanaCoin.svg" width="16" alt=""/><strong class="text-warning">LIT</strong>
-                                        </td>
-                                        <td>$43.63</td>
-                                        <td>-4.34%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img class="mr-2" src="/images/crypto-icons/NEM.svg" width="16" alt=""/> <strong class="text-success">NEM</strong>
-                                        </td>
-                                        <td>$1091.63</td>
-                                        <td>-23.12%</td>
-                                    </tr>
-
-
-                                    </tbody>
+                                    <!-- TradingView Widget BEGIN -->
+                                    <div class="tradingview-widget-container">
+                                        <div class="tradingview-widget-container__widget"></div>
+                                        <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/indices/" rel="noopener" target="_blank"><span class="blue-text">Indices</span></a> by TradingView</div> -->
+                                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+                                        {
+                                        "colorTheme": "light",
+                                        "dateRange": "12M",
+                                        "showChart": true,
+                                        "locale": "en",
+                                        "largeChartUrl": "",
+                                        "isTransparent": false,
+                                        "showSymbolLogo": true,
+                                        "width": "322",
+                                        "height": "660",
+                                        "plotLineColorGrowing": "rgba(33, 150, 243, 1)",
+                                        "plotLineColorFalling": "rgba(33, 150, 243, 1)",
+                                        "gridLineColor": "rgba(240, 243, 250, 1)",
+                                        "scaleFontColor": "rgba(120, 123, 134, 1)",
+                                        "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
+                                        "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+                                        "symbolActiveColor": "rgba(33, 150, 243, 0.12)",
+                                        "tabs": [
+                                        {
+                                            "title": "Indices",
+                                            "symbols": [
+                                            {
+                                                "s": "BINANCE:ETHBTC"
+                                            },
+                                            {
+                                                "s": "BINANCE:XRPBTC"
+                                            },
+                                            {
+                                                "s": "BINANCE:LTCBTC"
+                                            },
+                                            {
+                                                "s": "POLONIEX:USDTBTC"
+                                            },
+                                            {
+                                                "s": "BINANCE:BCHBTC"
+                                            },
+                                            {
+                                                "s": "BINANCE:XLMBTC"
+                                            }
+                                            ],
+                                            "originalTitle": "Indices"
+                                        }
+                                        ]
+                                    }
+                                        </script>
+                                    </div>
+                                    <!-- TradingView Widget END -->
                                 </table>
                             </div>
                         </div>
@@ -200,112 +186,334 @@
 
             </div>
 
-            <!-- <div class="row">
-                <div class="col-xl-4 col-md-6">
-                    <div class="card card-shadow mb-4">
-                        <div class="card-header border-0">
-                            <div class="custom-title-wrap bar-success">
-                                <div class="custom-title">Bitcoin BTC</div>
-                                <div class="custom-post-title">0.00000434 BTC</div>
-                                <div class=" widget-action-link">
-                                    <div class="text-warning weight700">$5,679</div>
-                                    <small class="text-muted">$25</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <canvas id="crypto_chart_1" height="150"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="card card-shadow mb-4">
-                        <div class="card-header border-0">
-                            <div class="custom-title-wrap bar-success">
-                                <div class="custom-title">Litecoin LTC</div>
-                                <div class="custom-post-title">0.00000434 LTC</div>
-                                <div class=" widget-action-link">
-                                    <div class="text-info weight700">$4,364</div>
-                                    <small class="text-muted">$25</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <canvas id="crypto_chart_2" height="150"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="card card-shadow mb-4">
-                        <div class="card-header border-0">
-                            <div class="custom-title-wrap bar-success">
-                                <div class="custom-title">NEO</div>
-                                <div class="custom-post-title">0.00000434 NEO</div>
-                                <div class=" widget-action-link">
-                                    <div class="text-success weight700">$3,479</div>
-                                    <small class="text-muted">$25</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <canvas id="crypto_chart_3" height="150"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
+            <div class="row">
+                <div class="col-xl-4 col-md-6" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
                     <div class="card card-shadow mb-4">
                         <div class="card-header border-0">
                             <div class="custom-title-wrap bar-success">
                                 <div class="custom-title">Ethereum ETH</div>
-                                <div class="custom-post-title">0.00000434 BTC</div>
-                                <div class=" widget-action-link">
-                                    <div class="text-purple weight700">$5,679</div>
-                                    <small class="text-muted">$25</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <canvas id="crypto_chart_4" height="150"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="card card-shadow mb-4">
-                        <div class="card-header border-0">
-                            <div class="custom-title-wrap bar-success">
-                                <div class="custom-title">Bitcoin BTC</div>
-                                <div class="custom-post-title">0.00000434 BTC</div>
+                                <!-- <div class="custom-post-title">0.00000434 BTC</div>
                                 <div class=" widget-action-link">
                                     <div class="text-warning weight700">$5,679</div>
                                     <small class="text-muted">$25</small>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="card-body">
-                            <canvas id="crypto_chart_5" height="150"></canvas>
+                        <div class="card-body" >
+                            <!-- <canvas id="crypto_chart_1" height="150"></canvas> -->
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/indices/" rel="noopener" target="_blank"><span class="blue-text">Indices</span></a> by TradingView</div> -->
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+                                {
+                                "colorTheme": "light",
+                                "dateRange": "12M",
+                                "showChart": true,
+                                "locale": "en",
+                                "largeChartUrl": "",
+                                "isTransparent": true,
+                                "showSymbolLogo": true,
+                                "width": "300",
+                                "height": "350",
+                                "plotLineColorGrowing": "rgba(33, 150, 243, 1)",
+                                "plotLineColorFalling": "rgba(33, 150, 243, 1)",
+                                "gridLineColor": "rgba(240, 243, 250, 1)",
+                                "scaleFontColor": "rgba(120, 123, 134, 1)",
+                                "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
+                                "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+                                "symbolActiveColor": "rgba(33, 150, 243, 0.12)",
+                                "tabs": [
+                                {
+                                    "title": "Indices",
+                                    "symbols": [
+                                    {
+                                        "s": "COINBASE:ETHUSD"
+                                    }
+                                    ],
+                                    "originalTitle": "Indices"
+                                }
+                                ]
+                            }
+                                </script>
+                            </div>
+                            <!-- TradingView Widget END -->
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-6">
+                <div class="col-xl-4 col-md-6" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
                     <div class="card card-shadow mb-4">
                         <div class="card-header border-0">
                             <div class="custom-title-wrap bar-success">
                                 <div class="custom-title">Ripple XRP</div>
-                                <div class="custom-post-title">0.00000434 BTC</div>
+                                <!-- <div class="custom-post-title">0.00000434 LTC</div>
                                 <div class=" widget-action-link">
-                                    <div class="text-primary weight700">$5,679</div>
+                                    <div class="text-info weight700">$4,364</div>
                                     <small class="text-muted">$25</small>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="card-body">
-                            <canvas id="crypto_chart_6" height="150"></canvas>
+                            <!-- <canvas id="crypto_chart_2" height="150"></canvas> -->
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/indices/" rel="noopener" target="_blank"><span class="blue-text">Indices</span></a> by TradingView</div> -->
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+                                {
+                                "colorTheme": "light",
+                                "dateRange": "12M",
+                                "showChart": true,
+                                "locale": "en",
+                                "largeChartUrl": "",
+                                "isTransparent": true,
+                                "showSymbolLogo": true,
+                                "width": "300",
+                                "height": "350",
+                                "plotLineColorGrowing": "rgba(33, 150, 243, 1)",
+                                "plotLineColorFalling": "rgba(33, 150, 243, 1)",
+                                "gridLineColor": "rgba(240, 243, 250, 1)",
+                                "scaleFontColor": "rgba(120, 123, 134, 1)",
+                                "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
+                                "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+                                "symbolActiveColor": "rgba(33, 150, 243, 0.12)",
+                                "tabs": [
+                                {
+                                    "title": "Indices",
+                                    "symbols": [
+                                    {
+                                        "s": "BITSTAMP:XRPUSD"
+                                    }
+                                    ],
+                                    "originalTitle": "Indices"
+                                }
+                                ]
+                            }
+                                </script>
+                            </div>
+                            <!-- TradingView Widget END -->
                         </div>
                     </div>
                 </div>
-            </div> -->
+                <div class="col-xl-4 col-md-6" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <div class="card card-shadow mb-4">
+                        <div class="card-header border-0">
+                            <div class="custom-title-wrap bar-success">
+                                <div class="custom-title">Litcoin LTC</div>
+                                <!-- <div class="custom-post-title">0.00000434 NEO</div>
+                                <div class=" widget-action-link">
+                                    <div class="text-success weight700">$3,479</div>
+                                    <small class="text-muted">$25</small>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <!-- <canvas id="crypto_chart_3" height="150"></canvas> -->
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/indices/" rel="noopener" target="_blank"><span class="blue-text">Indices</span></a> by TradingView</div> -->
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+                                {
+                                "colorTheme": "light",
+                                "dateRange": "12M",
+                                "showChart": true,
+                                "locale": "en",
+                                "largeChartUrl": "",
+                                "isTransparent": true,
+                                "showSymbolLogo": true,
+                                "width": "300",
+                                "height": "350",
+                                "plotLineColorGrowing": "rgba(33, 150, 243, 1)",
+                                "plotLineColorFalling": "rgba(33, 150, 243, 1)",
+                                "gridLineColor": "rgba(240, 243, 250, 1)",
+                                "scaleFontColor": "rgba(120, 123, 134, 1)",
+                                "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
+                                "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+                                "symbolActiveColor": "rgba(33, 150, 243, 0.12)",
+                                "tabs": [
+                                {
+                                    "title": "Indices",
+                                    "symbols": [
+                                    {
+                                        "s": "COINBASE:LTCUSD"
+                                    }
+                                    ],
+                                    "originalTitle": "Indices"
+                                }
+                                ]
+                            }
+                                </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <div class="card card-shadow mb-4">
+                        <div class="card-header border-0">
+                            <div class="custom-title-wrap bar-success">
+                                <div class="custom-title">USDT</div>
+                                <!-- <div class="custom-post-title">0.00000434 BTC</div>
+                                <div class=" widget-action-link">
+                                    <div class="text-purple weight700">$5,679</div>
+                                    <small class="text-muted">$25</small>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <!-- <canvas id="crypto_chart_4" height="150"></canvas> -->
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/indices/" rel="noopener" target="_blank"><span class="blue-text">Indices</span></a> by TradingView</div> -->
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+                                {
+                                "colorTheme": "light",
+                                "dateRange": "12M",
+                                "showChart": true,
+                                "locale": "en",
+                                "largeChartUrl": "",
+                                "isTransparent": true,
+                                "showSymbolLogo": true,
+                                "width": "300",
+                                "height": "350",
+                                "plotLineColorGrowing": "rgba(33, 150, 243, 1)",
+                                "plotLineColorFalling": "rgba(33, 150, 243, 1)",
+                                "gridLineColor": "rgba(240, 243, 250, 1)",
+                                "scaleFontColor": "rgba(120, 123, 134, 1)",
+                                "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
+                                "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+                                "symbolActiveColor": "rgba(33, 150, 243, 0.12)",
+                                "tabs": [
+                                {
+                                    "title": "Indices",
+                                    "symbols": [
+                                    {
+                                        "s": "KRAKEN:USDTUSD"
+                                    }
+                                    ],
+                                    "originalTitle": "Indices"
+                                }
+                                ]
+                            }
+                                </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <div class="card card-shadow mb-4">
+                        <div class="card-header border-0">
+                            <div class="custom-title-wrap bar-success">
+                                <div class="custom-title">Bitcoin Cash BCH</div>
+                                <!-- <div class="custom-post-title">0.00000434 BTC</div>
+                                <div class=" widget-action-link">
+                                    <div class="text-warning weight700">$5,679</div>
+                                    <small class="text-muted">$25</small>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <!-- <canvas id="crypto_chart_5" height="150"></canvas> -->
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/indices/" rel="noopener" target="_blank"><span class="blue-text">Indices</span></a> by TradingView</div> -->
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+                                {
+                                "colorTheme": "light",
+                                "dateRange": "12M",
+                                "showChart": true,
+                                "locale": "en",
+                                "largeChartUrl": "",
+                                "isTransparent": true,
+                                "showSymbolLogo": true,
+                                "width": "300",
+                                "height": "350",
+                                "plotLineColorGrowing": "rgba(33, 150, 243, 1)",
+                                "plotLineColorFalling": "rgba(33, 150, 243, 1)",
+                                "gridLineColor": "rgba(240, 243, 250, 1)",
+                                "scaleFontColor": "rgba(120, 123, 134, 1)",
+                                "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
+                                "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+                                "symbolActiveColor": "rgba(33, 150, 243, 0.12)",
+                                "tabs": [
+                                {
+                                    "title": "Indices",
+                                    "symbols": [
+                                    {
+                                        "s": "COINBASE:BCHUSD"
+                                    }
+                                    ],
+                                    "originalTitle": "Indices"
+                                }
+                                ]
+                            }
+                                </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <div class="card card-shadow mb-4">
+                        <div class="card-header border-0">
+                            <div class="custom-title-wrap bar-success">
+                                <div class="custom-title">XLM</div>
+                                <!-- <div class="custom-post-title">0.00000434 BTC</div>
+                                <div class=" widget-action-link">
+                                    <div class="text-primary weight700">$5,679</div>
+                                    <small class="text-muted">$25</small>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <!-- <canvas id="crypto_chart_6" height="150"></canvas> -->
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/indices/" rel="noopener" target="_blank"><span class="blue-text">Indices</span></a> by TradingView</div> -->
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+                                {
+                                "colorTheme": "light",
+                                "dateRange": "12M",
+                                "showChart": true,
+                                "locale": "en",
+                                "largeChartUrl": "",
+                                "isTransparent": true,
+                                "showSymbolLogo": true,
+                                "width": "300",
+                                "height": "350",
+                                "plotLineColorGrowing": "rgba(33, 150, 243, 1)",
+                                "plotLineColorFalling": "rgba(33, 150, 243, 1)",
+                                "gridLineColor": "rgba(240, 243, 250, 1)",
+                                "scaleFontColor": "rgba(120, 123, 134, 1)",
+                                "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
+                                "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+                                "symbolActiveColor": "rgba(33, 150, 243, 0.12)",
+                                "tabs": [
+                                {
+                                    "title": "Indices",
+                                    "symbols": [
+                                    {
+                                        "s": "KRAKEN:XLMUSD"
+                                    }
+                                    ],
+                                    "originalTitle": "Indices"
+                                }
+                                ]
+                            }
+                                </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-6">
                     <div class="card card-shadow mb-4 ">
                         <div class="card-header border-0">
@@ -419,9 +627,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-8">
                     <div class="card card-shadow mb-4 ">
                         <div class="card-header border-0">
@@ -546,19 +754,13 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </div>
 
         <!--footer-->
-        <footer class="sticky-footer">
-            <div class="container">
-                <div class="text-center">
-                    <small>Copyright &copy; 2020</small>
-                </div>
-            </div>
-        </footer>
-        <!--/footer-->
+        <%- include('../includes/dashboard-footer.ejs') %>
+
     </div>
     <!--/main content wrapper-->
 
