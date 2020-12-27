@@ -23,11 +23,8 @@ router.get('/faq', mainsiteController.faq);
 
 router.get('/error', mainsiteController.error);
 
-router.get('/sign-in', mainsiteController.login);
-
 router.get('/recover', mainsiteController.recover);
 
-router.get('/sign-up', mainsiteController.register);
 
 
 

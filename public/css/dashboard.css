@@ -189,6 +189,48 @@
 
 
 
+/* MAIN PAGE */
+.wallet-card-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: -10px;
+}
+
+.wallet-title {
+  font-size: 20px !important;
+
+}
+
+.wallet-body {
+  color: rgb(70, 72, 85);
+  margin-bottom: 30px;
+}
+
+.btn-withdraw {
+  /* font-weight: bold; */
+  font-size: 12px;
+}
+
+.btn-deposit {
+  font-size: 12px;
+}
+
+.invest-card-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: -10px;
+}
+
+.invest-title {
+  font-size: 20px !important;
+}
+
+
+
 
 /* TRANSACTION PAGE */
 
@@ -243,11 +285,11 @@
   opacity: 0.5;
 }
 
-.transaction-table-body {
-  /* width: 1110px; */
-  /* height: 60px; */
-  /* background-color: #FFFFFF; */
-}
+/* .transaction-table-body {
+  width: 1110px;
+  height: 60px;
+  background-color: #FFFFFF;
+} */
 
 .transaction-table-row {
   display: flex;
@@ -337,9 +379,9 @@
     width: 320px;
     font-size: 20px;
   }
-  .deposit-option {
-    /* position: relative; */
-  }
+  /* .deposit-option {
+    position: relative;
+  } */
   .deposit-link {
     font-size: 16px;
   }
@@ -422,9 +464,9 @@
     width: 320px;
     font-size: 20px;
   }
-  .withdraw-option {
-    /* position: relative; */
-  }
+  /* .withdraw-option {
+    position: relative;
+  } */
   .withdraw-link {
     font-size: 14px;
     padding: 8px 60px 8px 15px;

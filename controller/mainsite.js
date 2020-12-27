@@ -75,12 +75,12 @@ exports.error = (req, res, next) => {
     });
 };
 
-exports.login = (req, res, next) => {
-    res.render('mainsite/login', {
-        pageTitle: 'Login',
-        path: '/sign-in'
-    });
-};
+// exports.login = (req, res, next) => {
+//     res.render('mainsite/login', {
+//         pageTitle: 'Login',
+//         path: '/sign-in'
+//     });
+// };
 
 exports.recover = (req, res, next) => {
     res.render('mainsite/recover', {
@@ -89,9 +89,9 @@ exports.recover = (req, res, next) => {
     });
 };
 
-exports.register = (req, res, next) => {
-    res.render('mainsite/sign-up', {
-        pageTitle: 'Sign-up',
-        path: '/sign-up'
-    });
-};
+// exports.register = (req, res, next) => {
+//     res.render('mainsite/sign-up', {
+//         pageTitle: 'Sign-up',
+//         path: '/sign-up'
+//     });
+// };
