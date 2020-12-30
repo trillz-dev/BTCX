@@ -101,9 +101,9 @@ exports.support = (req, res, next) => {
     });
 };
 
-exports.login = (req, res, next) => {
-    res.redirect('mainsite/login', {
-        pageTitle: 'Sign In',
-        path: '/sign-in'
-    });
-};
+// exports.login = (req, res, next) => {
+//     res.redirect('mainsite/login', {
+//         pageTitle: 'Sign In',
+//         path: '/login'
+//     });
+// };

@@ -1,35 +1,33 @@
 const path = require('path');
-
 const express = require('express');
-
 const dashboardController = require('../controller/dashboard');
-
 const router = express.Router();
+const { ensureAuthenticated } = require('../config/auth')
 
 
-router.get('/main', dashboardController.main);
+router.get('/main', ensureAuthenticated, dashboardController.main);
 
-router.get('/investment', dashboardController.investment);
+router.get('/investment', ensureAuthenticated, dashboardController.investment);
 
-router.get('/transaction', dashboardController.transaction);
+router.get('/transaction', ensureAuthenticated, dashboardController.transaction);
 
-router.get('/deposit', dashboardController.deposit);
+router.get('/deposit', ensureAuthenticated, dashboardController.deposit);
 
-router.get('/btc-deposit', dashboardController.btcDeposit);
+router.get('/btc-deposit', ensureAuthenticated, dashboardController.btcDeposit);
 
-router.get('/bch-deposit', dashboardController.bchDeposit);
+router.get('/bch-deposit', ensureAuthenticated, dashboardController.bchDeposit);
 
-router.get('/eth-deposit', dashboardController.ethDeposit);
+router.get('/eth-deposit', ensureAuthenticated, dashboardController.ethDeposit);
 
-router.get('/withdraw', dashboardController.withdraw);
+router.get('/withdraw', ensureAuthenticated, dashboardController.withdraw);
 
-router.get('/settings', dashboardController.settings);
+router.get('/settings', ensureAuthenticated, dashboardController.settings);
 
-router.get('/settings-security', dashboardController.settingSecurity);
+router.get('/settings-security', ensureAuthenticated, dashboardController.settingSecurity);
 
-router.get('/support', dashboardController.support);
+router.get('/support', ensureAuthenticated, dashboardController.support);
 
-router.get('/sign-in', dashboardController.login);
+// router.get('/login', dashboardController.login);
 
 
 

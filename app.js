@@ -10,6 +10,7 @@ const dotenv = require('dotenv')
 const request = require('request');
 const flash = require('connect-flash');
 const session = require('express-session');
+const passport = require('passport')
 
 
 const app = express();
@@ -24,12 +25,25 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+//Load config
+dotenv.config({ path: './config/config.env'});
+
+// Passport config
+require('./config/passport')(passport);
+
+// Connect Mongoose
+connectDB();
+
 // Express Session
 app.use(session({
     secret: 'secret',
     resave: true,
     saveUninitialized: true
 }));
+
+//  Passport Middleware
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Connect Flash
 app.use(flash());
@@ -38,6 +52,7 @@ app.use(flash());
 app.use((req, res, next) => {
     res.locals.success_msg = req.flash('success_msg');
     res.locals.error_msg = req.flash('error_msg');
+    res.locals.error = req.flash('error');
     next();
 });
 
@@ -46,11 +61,6 @@ io.on('connection', socket => {
     console.log('New WS connection...')
 });
 
-//Load config
-dotenv.config({ path: './config/config.env'});
-
-// Connect Mongoose
-connectDB();
 
 //Routes
 const mainsiteRoutes = require('./routes/mainsite');

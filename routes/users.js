@@ -3,16 +3,18 @@ const express = require('express');
 const usersController = require('../controller/users');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
+const passport = require('passport');
+
 
 
 // User model 
 const User = require('../Models/User');
 
 
-
-
+// Login GET
 router.get('/login', usersController.login);
 
+// Register GET
 router.get('/register',(req, res, next) => {
     res.render('mainsite/register', {
         pageTitle: 'Sign-up',
@@ -23,6 +25,16 @@ router.get('/register',(req, res, next) => {
 
 });
 
+// Login POST
+router.post('/login', (req, res, next) => {
+    passport.authenticate('local', {
+        successRedirect: '/main',
+        failureRedirect: '/login',
+        failureFlash: true
+    })(req, res, next)
+});
+
+// Register POST
 router.post('/register',(req, res, next) => {
 
     const { firstName, lastName, email, password, password2 } = req.body;
@@ -73,8 +85,7 @@ router.post('/register',(req, res, next) => {
                         firstName,
                         lastName,
                         email,
-                        password,
-                        password2
+                        password
                     });
 
                     // Hash password
@@ -83,7 +94,7 @@ router.post('/register',(req, res, next) => {
                             if(err) console.log(err);
                             // Set password to hashed
                             newUser.password = hash;
-                            newUser.password2 =hash;
+                            // newUser.password2 =hash;
 
                             // Save user
                             newUser.save()
@@ -101,6 +112,11 @@ router.post('/register',(req, res, next) => {
 
 });
 
-
+// logout
+router.get('/logout', (req, res) => {
+    req.logout();
+    req.flash('success_msg', 'You are logged out!');
+    res.redirect('/login')
+});
 
 module.exports = router;
