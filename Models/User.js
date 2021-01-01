@@ -1,4 +1,5 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+var passportLocalMongoose = require('passport-local-mongoose');
 
 const UserSchema = new mongoose.Schema({
     firstName: {
@@ -22,8 +23,18 @@ const UserSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
+    resetPasswordToken: { 
+        type: String 
+    },
+    resetPasswordExpires: {
+        type: Date
+    }
     
 });
+
+
+// The below is used so as to allow passport to reset password
+UserSchema.plugin(passportLocalMongoose);
 
 
 module.exports = User = mongoose.model('user', UserSchema)

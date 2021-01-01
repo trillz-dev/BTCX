@@ -4,6 +4,9 @@ const usersController = require('../controller/users');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
+const async = require('async')
+const crypto = require('crypto')
+const nodeMailer = require('nodemailer')
 
 
 
@@ -118,5 +121,89 @@ router.get('/logout', (req, res) => {
     req.flash('success_msg', 'You are logged out!');
     res.redirect('/login')
 });
+
+// Recover GET
+router.get('/recover', (req, res, next) => {
+    res.render('mainsite/recover', {
+        pageTitle: 'Recover Password',
+        path: '/recover-password'
+    });
+});
+
+// Recover POST
+router.post('/recover', (req, res, next) => {
+    const { email } = req.body;
+    async.waterfall([
+        done => {
+            crypto.randomBytes(20, (err, buf) => {
+                let token = buf.toString('hex');
+                done(err, token)
+            })
+        },
+        (token, done) => {
+            user.findOne({ email: email }, (err, user) => {
+                if (!user) {
+                    req.flash('error', 'No account with email adresss exist!')
+                    return res.redirect('/recover')
+                }
+
+                user.resetPasswordToken = token;
+                user.restPasswordExpires = Date.now() + 3600000; // 1 hour
+
+                user.save(err => {
+                    done(err, token, user)
+                })
+            });
+        },
+        (token, user, done) => {
+            let smtpTransport = nodeMailer.createTransport({
+                service: 'Gmail',
+                auth: {
+                    user: 'williamclevethacker@gmail.com',
+                    pass: process.env.GMAILPW
+                }
+            });
+            let mailOptions = {
+                to: user.email,
+                from: 'williamclevethacker@gmail.com',
+                subject: 'Node.js Password Reset',
+                text: 'You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n' +
+                'Please click on the following link, or paste this into your browser to complete the process:\n\n' +
+                'http://' + req.headers.host + '/reset/' + token + '\n\n' +
+                'If you did not request this, please ignore this email and your password will remain unchanged.\n'
+            };
+            smtpTransport.sendMail(mailOptions, err => {
+                req.flash('success_msg', 'An e-mail has been sent to ' + user.email + ' with further instructions');
+                done(err, 'done')
+            });
+        }
+    ], err => {
+        if (err) {
+            res.redirect('/recover')
+        }
+    });
+});
+
+// Reset GET
+// router.get('/reset/:token', (req, res, next) => {
+//     const token = req.params.token;
+//     user.findOne({ 
+//         resetPasswordToken: token,
+//         restPasswordExpires: { $gt: Date.now() },
+//       }, (err, user) => {
+//           if (!user) {
+//               req.flash('error', 'Password reset token is invalid or has expired!');
+//               return res.redirect('/recover');
+//           }
+//           res.render('mainsite/reset', { token: token });
+//       })
+// });
+
+// Reset POST
+// router.post('/reset/:token', (req, res, next) => {
+//     const token = req.params.token;
+    
+// });
+
 
 module.exports = router;

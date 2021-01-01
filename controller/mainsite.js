@@ -82,13 +82,6 @@ exports.error = (req, res, next) => {
 //     });
 // };
 
-exports.recover = (req, res, next) => {
-    res.render('mainsite/recover', {
-        pageTitle: 'Recover Password',
-        path: '/recover-password'
-    });
-};
-
 // exports.register = (req, res, next) => {
 //     res.render('mainsite/sign-up', {
 //         pageTitle: 'Sign-up',

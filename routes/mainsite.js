@@ -23,8 +23,6 @@ router.get('/faq', mainsiteController.faq);
 
 router.get('/error', mainsiteController.error);
 
-router.get('/recover', mainsiteController.recover);
-
 
 
 
