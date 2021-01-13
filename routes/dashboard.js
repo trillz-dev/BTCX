@@ -27,7 +27,6 @@ router.get('/settings-security', ensureAuthenticated, dashboardController.settin
 
 router.get('/support', ensureAuthenticated, dashboardController.support);
 
-// router.get('/login', dashboardController.login);
 
 
 

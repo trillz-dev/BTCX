@@ -1,5 +1,6 @@
 const bodyParser = require('body-parser');
 const request = require('request');
+// const User = require('../Models/User');
 
 exports.main = (req, res, next) => {
     request('https://coinlib.io/api/v1/coinlist?key=9b79bb5181f4b204', (error, response, body) => {
@@ -25,7 +26,7 @@ exports.main = (req, res, next) => {
             BCH,
             BNB,
             USDT,
-            XLM
+            XLM,
         });
 });
 
@@ -83,7 +84,12 @@ exports.withdraw = (req, res, next) => {
 exports.settings = (req, res, next) => {
     res.render('dashboard/settings', {
         pageTitle: 'Settings',
-        path: '/settings'
+        path: '/settings',
+        userName: `${req.user.firstName} ${req.user.lastName}`,
+        userEmail: req.user.email,
+        userNumber: req.user.number,
+        userFirst: req.user.firstName,
+        userLast: req.user.lastName
     });
 };
 
@@ -100,10 +106,3 @@ exports.support = (req, res, next) => {
         path: '/support'
     });
 };
-
-// exports.login = (req, res, next) => {
-//     res.redirect('mainsite/login', {
-//         pageTitle: 'Sign In',
-//         path: '/login'
-//     });
-// };

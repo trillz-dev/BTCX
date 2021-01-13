@@ -506,6 +506,10 @@
   left: 135px;
 }
 
+.profile-img {
+  border-radius: 50px;
+}
+
 .profile-summary-name {
   font-size: 22px;
   margin-top: -20px;
@@ -570,6 +574,36 @@
 
 .profile-summary-bank-phone,
 .profile-summary-bank-email {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
+  height: 40px;
+  background: #FAFBFC;
+  border-radius: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+}
+
+.profile-summary-crypto-wrapper {
+  margin-bottom: 30px;
+}
+
+.profile-summary-crypto-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 320px;
+  margin-bottom: 15px;
+}
+
+.profile-summary-crypto-name {
+  margin-bottom: 10px;
+}
+
+.profile-summary-crypto-name {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

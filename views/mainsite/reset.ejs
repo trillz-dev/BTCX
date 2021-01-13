@@ -1,0 +1,80 @@
+<%- include('../includes/header.ejs') %>
+
+<!-- ================================
+    START BREADCRUMB AREA
+================================= -->
+<section class="breadcrumb-area">
+    <div class="container">
+    </div><!-- end container -->
+</section><!-- end hero-area -->
+<!-- ================================
+    END BREADCRUMB AREA
+================================= -->
+
+<!-- ================================
+       START FORM AREA
+================================= -->
+<section class="form-shared reset-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <div class="contact-form-action">
+                    <div class="form-heading">
+                        <h3 class="form__title">Reset Password!</h3>
+                        <p class="form__desc reset__desc">
+                            Enter the email of your account to reset password.
+                            Then you will receive a link to email to reset the password.If
+                            you have any issue about reset password
+                            <a href="/contact">contact us</a>
+                        </p>
+                    </div>
+                    <!--Contact Form-->
+                    <%- include ('../includes/messages.ejs') %> 
+                    <form method="post" action="/reset">
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-12 form-group">
+                                <input class="form-control" type="email" name="email" placeholder="Enter email address"
+                                       required="">
+                            </div><!-- end col-lg-12 -->
+
+                            <div class="col-lg-12 col-sm-12 col-xs-12 form-group">
+                                <button class="theme-btn reset__btn" type="submit">reset password</button>
+                            </div><!-- end col-lg-12 -->
+
+                            <div class="col-lg-6 col-sm-6 col-xs-12 account-assist">
+                                <p class="account__desc">
+                                    <a href="/login">Login</a>
+                                </p>
+                            </div><!-- end col-lg-12 -->
+
+                            <div class="col-lg-6 col-sm-6 col-xs-12 account-assist">
+                                <p class="account__desc text-right">
+                                    Not a member?<a href="/register"> Register</a>
+                                </p>
+                            </div><!-- end col-lg-12 -->
+                        </div><!-- end row -->
+                    </form>
+                </div><!-- end contact-form -->
+            </div><!-- end col-lg-7 -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section><!-- end form-shared -->
+<!-- ================================
+       START FORM AREA
+================================= -->
+
+<%- include('../includes/footer.ejs') %>
+
+<!-- Template JS Files -->
+<script src="/public/js/jquery.min.js"></script>
+<script src="/public/js/popper.min.js"></script>
+<script src="/public/js/bootstrap.min.js"></script>
+<script src="/public/js/owl.carousel.min.js"></script>
+<script src="/public/js/waypoint.min.js"></script>
+<script src="/public/js/jquery.counterup.min.js"></script>
+<script src="/public/js/jquery.magnific-popup.min.js"></script>
+<script src="/public/js/smooth-scrolling.js"></script>
+<script src="/public/js/jquery-nice-select.js"></script>
+<script src="/public/js/main.js"></script>
+</body>
+</html>

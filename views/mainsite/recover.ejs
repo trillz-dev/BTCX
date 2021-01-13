@@ -29,7 +29,8 @@
                         </p>
                     </div>
                     <!--Contact Form-->
-                    <form method="post" action="/reset">
+                    <%- include ('../includes/messages.ejs') %> 
+                    <form method="post" action="/recover">
                         <div class="row">
                             <div class="col-lg-12 col-sm-12 form-group">
                                 <input class="form-control" type="email" name="email" placeholder="Enter email address"

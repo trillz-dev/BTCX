@@ -40,7 +40,7 @@ router.post('/login', (req, res, next) => {
 // Register POST
 router.post('/register',(req, res, next) => {
 
-    const { firstName, lastName, email, password, password2 } = req.body;
+    const { firstName, lastName, email, password, password2, number } = req.body;
     let errors = [];
 
     // Check required fields
@@ -55,8 +55,10 @@ router.post('/register',(req, res, next) => {
 
     // Check password length
     if(password.length < 6) {
-        errors.push({ msg: 'Password should be at least 6 characters!'})
+        errors.push({ msg: 'Password should be at least 6 characters!' })
     }
+
+    
 
     if(errors.length > 0) {
         res.render('mainsite/register', {
@@ -65,7 +67,8 @@ router.post('/register',(req, res, next) => {
             errors,
             firstName,
             lastName,
-            email
+            email,
+            number
         });
     } else {
         // Validation passed
@@ -80,7 +83,8 @@ router.post('/register',(req, res, next) => {
                         errors,
                         firstName,
                         lastName,
-                        email
+                        email,
+                        number
                     });
                 } else {
                     // Create New User
@@ -88,7 +92,8 @@ router.post('/register',(req, res, next) => {
                         firstName,
                         lastName,
                         email,
-                        password
+                        number,
+                        password,
                     });
 
                     // Hash password
@@ -97,7 +102,6 @@ router.post('/register',(req, res, next) => {
                             if(err) console.log(err);
                             // Set password to hashed
                             newUser.password = hash;
-                            // newUser.password2 =hash;
 
                             // Save user
                             newUser.save()
@@ -132,7 +136,7 @@ router.get('/recover', (req, res, next) => {
 
 // Recover POST
 router.post('/recover', (req, res, next) => {
-    const { email } = req.body;
+    const email  = req.body.email;
     async.waterfall([
         done => {
             crypto.randomBytes(20, (err, buf) => {
@@ -141,9 +145,9 @@ router.post('/recover', (req, res, next) => {
             })
         },
         (token, done) => {
-            user.findOne({ email: email }, (err, user) => {
+            User.findOne({ email: email }, (err, user) => {
                 if (!user) {
-                    req.flash('error', 'No account with email adresss exist!')
+                    req.flash('error', 'No account with email adresss exists!')
                     return res.redirect('/recover')
                 }
 
@@ -156,13 +160,21 @@ router.post('/recover', (req, res, next) => {
             });
         },
         (token, user, done) => {
-            let smtpTransport = nodeMailer.createTransport({
-                service: 'Gmail',
+            // let smtpTransport = nodeMailer.createTransport({
+            //     service: 'Gmail',
+            //     auth: {
+            //         user: 'williamclevethacker@gmail.com',
+            //         pass: process.env.GMAILPW
+            //     }
+            // });
+            var smtpTransport = nodeMailer.createTransport({
+                host: "Gmail",
+                port: 587,
                 auth: {
-                    user: 'williamclevethacker@gmail.com',
-                    pass: process.env.GMAILPW
+                  user: "helloadetomiwa@gmail.com",
+                  pass: process.env.GMAILPW
                 }
-            });
+              });
             let mailOptions = {
                 to: user.email,
                 from: 'williamclevethacker@gmail.com',
@@ -180,30 +192,32 @@ router.post('/recover', (req, res, next) => {
     ], err => {
         if (err) {
             res.redirect('/recover')
+        } else {
+            console.log('email sent')
         }
     });
 });
 
 // Reset GET
-// router.get('/reset/:token', (req, res, next) => {
-//     const token = req.params.token;
-//     user.findOne({ 
-//         resetPasswordToken: token,
-//         restPasswordExpires: { $gt: Date.now() },
-//       }, (err, user) => {
-//           if (!user) {
-//               req.flash('error', 'Password reset token is invalid or has expired!');
-//               return res.redirect('/recover');
-//           }
-//           res.render('mainsite/reset', { token: token });
-//       })
-// });
+router.get('/reset/:token', (req, res, next) => {
+    const token = req.params.token;
+    user.findOne({ 
+        resetPasswordToken: token,
+        restPasswordExpires: { $gt: Date.now() },
+      }, (err, user) => {
+          if (!user) {
+              req.flash('error', 'Password reset token is invalid or has expired!');
+              return res.redirect('/recover');
+          }
+          res.render('mainsite/reset', { token: token });
+      })
+});
 
 // Reset POST
-// router.post('/reset/:token', (req, res, next) => {
-//     const token = req.params.token;
+router.post('/reset/:token', (req, res, next) => {
+    const token = req.params.token;
     
-// });
+});
 
 
 module.exports = router;
