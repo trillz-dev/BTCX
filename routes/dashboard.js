@@ -23,6 +23,8 @@ router.get('/withdraw', ensureAuthenticated, dashboardController.withdraw);
 
 router.get('/settings', ensureAuthenticated, dashboardController.settings);
 
+router.get('/settings-withdrawal', ensureAuthenticated, dashboardController.settingWithdrawal);
+
 router.get('/settings-security', ensureAuthenticated, dashboardController.settingSecurity);
 
 router.get('/support', ensureAuthenticated, dashboardController.support);

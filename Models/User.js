@@ -27,6 +27,21 @@ const UserSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
+    bank: {
+        type: String,
+    },
+    acct: {
+        type: Number,
+    },
+    btc: {
+        type: String,
+    },
+    eth: {
+        type: String,
+    },
+    ltc: {
+        type: String,
+    },
     resetPasswordToken: { 
         type: String 
     },

@@ -93,10 +93,27 @@ exports.settings = (req, res, next) => {
     });
 };
 
+exports.settingWithdrawal = (req, res, next) => {
+    res.render('dashboard/settings-withdrawal-info', {
+        pageTitle: 'Settings',
+        path: '/settings-withdrawal',
+        userName: `${req.user.firstName} ${req.user.lastName}`,
+        userEmail: req.user.email,
+        userNumber: req.user.number,
+        userFirst: req.user.firstName,
+        userLast: req.user.lastName
+    });
+};
+
 exports.settingSecurity = (req, res, next) => {
     res.render('dashboard/settings-security', {
         pageTitle: 'Settings',
-        path: '/settings-security'
+        path: '/settings-security',
+        userName: `${req.user.firstName} ${req.user.lastName}`,
+        userEmail: req.user.email,
+        userNumber: req.user.number,
+        userFirst: req.user.firstName,
+        userLast: req.user.lastName
     });
 };
 

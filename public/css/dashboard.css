@@ -729,6 +729,11 @@
   font-size: 14px;
 }
 
+.profile-edit-btn {
+  margin-left: 70px;
+  margin-top: 30px;
+}
+
 @media screen and ( max-width: 500px ) {
 
   .personal-setting {
@@ -782,6 +787,36 @@
 }
 
 
+/* SETTINGS-WITHDRAWAL */
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+  margin-top: 50px;
+}
+
+.form-div-left {
+  margin-right: 30px;
+  display: flex;
+}
+
+.profile_form-group {
+  display: flex;
+  flex-direction: column;
+  width: 260px
+}
+
+.profile-bank, 
+.profile-acct,
+.profile-btc,
+.profile-eth,
+.profile-ltc {
+  border: 1px solid #535875;
+  height: 45px;
+  border-radius: 5px;
+}
+
 
 /* SETTINGS-SECURITY PAGE */
 
@@ -796,18 +831,24 @@
   color: #0F1222;
 }
 
-.security-form .row-1,
-.security-form .row-2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 350px;
+.security-form {
   margin-left: 70px;
   margin-top: 15px;
 }
 
-.security-question,
-.security-answer {
+.security-form .row-1,
+.security-form .row-2,
+.security-form .row-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 500px;
+  
+}
+
+.security-oldPassword,
+.security-newPassword,
+.security-confirmPassword {
   border: 1px solid #535875;
   height: 45px;
   border-radius: 5px;

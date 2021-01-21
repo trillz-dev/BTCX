@@ -7,156 +7,45 @@
         <section class="main_setting">
             <div class="main_setting-container row">
                 <div class="col-lg-4 col-sm-6">
-                    <div class="profile-summary">
-                        <div class="profile-summary-images">
-                            <div>
-                                <img class="img-fluid" src="/public/images/Combined Shape Copy.png" alt="">
-                            </div>
-                            <div class="profile-summary-img">
-                                <img class="img-fluid" src="/public/images/Oval Copy 2.png" alt="" >
-                            </div>
-                        </div>
-        
-                        <div>
-                            <h3 class="profile-summary-name text-capitalize">james foster</h3>
-                        </div>
-        
-                        <div class="profile-summary-contact-wrapper">
-                            <div class="profile-summary-contact-header text-uppercase">
-                                <div>
-                                    <p class="profile-summary-info-title">contact info</p>
-                                </div>
-                                <div>
-                                    <a class="profile-summary-info-title" href=""><span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                                      </svg></span>update</a>
-                                </div>
-                            </div>
-                            <div class="profile-summary-contact-body text-capitalize">
-                                <div class="profile-summary-contact-email">
-                                    <div>
-                                        <p class="profile-summary-info">email</p>
-                                    </div>
-                                    <div>
-                                        <p class="profile-summary-info">james@gmail.com</p>
-                                    </div>
-                                </div>
-        
-                                <div class="profile-summary-contact-phone">
-                                    <div>
-                                        <p class="profile-summary-info">phone</p>
-                                    </div>
-                                    <div>
-                                        <p class="profile-summary-info">+234 91 2345 6789</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <div class="profile-summary-bank-wrapper">
-                            <div class="profile-summary-bank-header text-uppercase">
-                                <div>
-                                    <p class="profile-summary-info-title">bank details</p>
-                                </div>
-                                <div>
-                                    <a class="profile-summary-info-title" href=""><span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                                      </svg></span>update</a>
-                                </div>
-                            </div>
-                            <div class="profile-summary-bank-body text-capitalize">
-                                <div class="profile-summary-bank-email">
-                                    <div>
-                                        <p class="profile-summary-info">bank</p>
-                                    </div>
-                                    <div>
-                                        <p class="profile-summary-info">wells fargo</p>
-                                    </div>
-                                </div>
-        
-                                <div class="profile-summary-bank-phone">
-                                    <div>
-                                        <p class="profile-summary-info">account</p>
-                                    </div>
-                                    <div>
-                                        <p class="profile-summary-info">0123456789</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        
-                    </div>
+                    <%- include('../includes/profile-summary.ejs') %>
                 </div>
         
                 <div class="col-lg-8 col-sm-6">
                     <div class="personal-setting">
-                        <div class="setting-navigation">
-                            <nav class="nav setting-nav">
-                                <li class="nav-item setting-item-1">
-                                    <a class="nav-link setting-link" href="./settings">Profile</a>
-                                </li>
-                                <li class="nav-item setting-item-2">
-                                    <a class="nav-link setting-link" href="./settings-security">Security</a>
-                                </li>
-                                <li class="nav-item setting-item-3">
-                                    <a class="nav-link setting-link" href="#">Bank Details</a>
-                                </li>
-                                <li class="nav-item setting-item-4">
-                                    <a class="nav-link setting-link" href="#">Notification</a>
-                                </li>
-                                <!-- <li class="nav-item setting-item-5">
-                                    <a class="nav-link setting-link" href="#">Cancel</a>
-                                </li>
-                                <li class="nav-item setting-item-6">
-                                    <a class="nav-link" href="#"><button class="btn setting-nav-btn">Save Changes</button></a>
-                                </li> -->
-                            </nav>
-    
-                            <hr>
-                        </div>
+                        <%- include('../includes/settings-nav.ejs') %>
     
                         <div class="security-section">
                             <div class="security-header">
                                 <div>
-                                    <h3 class="security-title">Security questions</h3>
+                                    <h3 class="security-title text-capitalize">reset password</h3>
                                 </div>
                             </div>
                         </div>
     
                         <form method="get" action="" class="security-form">
                             <div class="row-1">
-                                <div class="form-left">
-                                    <div class="form-group">
-                                        <label for="question">Question</label>
-                                        <input type="text" name="question" id="" placeholder="Enter your security question..." class="security-question">
-                                    </div>
-                                </div>
-        
-                                <div class="form-right">
-                                    <div class="form-group">
-                                        <label for="answer">Answer</label>
-                                        <input type="text" name="answer" id="" placeholder="Enter your answer..." class="security-answer">
-                                    </div>
-                                </div>
+                                <div class="form-group profile_form-group">
+                                    <label for="oldPassword">Old Password</label>
+                                    <input type="text" name="oldPassword" id="" placeholder="Enter your security question..." class="security-oldPassword">
+                                </div>  
                             </div>
 
                             <div class="row-2">
-                                <div class="form-left">
-                                    <div class="form-group">
-                                        <label for="question">Question</label>
-                                        <input type="text" name="question" id="" placeholder="Enter your security question..." class="security-question">
-                                    </div>
-                                    <div class="form-group">
-                                        <button class="security-btn btn">Save Question</button>
-                                    </div>
+                                <div class="form-group profile_form-group">
+                                    <label for="newPassword">New Password</label>
+                                    <input type="text" name="newPassword" id="" placeholder="Enter your security question..." class="security-newPassword">
                                 </div>
-        
-                                <div class="form-right">
-                                    <div class="form-group">
-                                        <label for="answer">Answer</label>
-                                        <input type="text" name="answer" id="" placeholder="Enter your answer..." class="security-answer">
-                                    </div>
+                            </div>
+
+                            <div class="row-3">
+                                <div class="form-group profile_form-group">
+                                    <label for="confirmPassword">Confirm Password</label>
+                                    <input type="text" name="confirmPassword" id="" placeholder="Enter your security question..." class="security-confirmPassword">
                                 </div>
+                            </div>
+
+                            <div class="form-group">
+                                <button class="security-btn btn text-capitalize">reset password</button>
                             </div>
                         </form>
                     </div>
