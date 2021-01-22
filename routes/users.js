@@ -1,6 +1,5 @@
 const path = require('path');
 const express = require('express');
-const usersController = require('../controller/users');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
@@ -15,7 +14,12 @@ const User = require('../Models/User');
 
 
 // Login GET
-router.get('/login', usersController.login);
+router.get('/login', (req, res, next) => {
+    res.render('mainsite/login', {
+        pageTitle: 'Login',
+        path: '/login'
+    });
+});
 
 // Register GET
 router.get('/register',(req, res, next) => {

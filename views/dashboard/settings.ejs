@@ -14,16 +14,16 @@
                     <div class="personal-setting">
                         <%- include('../includes/settings-nav.ejs') %>
         
-                        <form method="get" action="/settings">
+                        <form method="post" action="/settings">
                             <div class="profile-form">
                                 <div class="form-left">
                                     <div class="form-group profile_form-group">
                                         <label for="fname">First Name</label>
-                                        <input type="text" name="fname" id="" class="profile-fname" disabled  placeholder= <%= userFirst %>>
+                                        <input type="text" name="fname" id="" class="profile-fname" placeholder= <%= userFirst %>>
                                     </div>
                                     <div class="form-group profile_form-group">
                                         <label for="email">Email</label>
-                                        <input type="text" name="email" id=""class="profile-email" disabled  placeholder= <%= userEmail %>>
+                                        <input type="text" name="email" id=""class="profile-email" disabled placeholder= <%= userEmail %>>
                                     </div>
                                     <!-- <div class="form-group profile_form-group">
                                         <label for="password">Password</label>
@@ -34,7 +34,7 @@
                                 <div class="form-right">
                                     <div class="form-group profile_form-group">
                                         <label for="lname">Last Name</label>
-                                        <input type="text" name="lname" id=""class="profile-lname" disabled  placeholder= <%= userLast %>>
+                                        <input type="text" name="lname" id=""class="profile-lname" placeholder= <%= userLast %>>
                                     </div>
                                     <div class="form-group profile_form-group">
                                         <label for="phone">Phone</label>

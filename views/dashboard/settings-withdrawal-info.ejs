@@ -14,12 +14,12 @@
                     <div class="personal-setting">
                         <%- include('../includes/settings-nav.ejs') %>
         
-                        <form method="get" action="" class="">
+                        <form method="post" action="/settings-withdrawal" class="">
                             <div class="form-div">
                                 <div class="form-div-left">
                                     <div class="form-group profile_form-group">
                                         <label for="bank">Bank Name</label>
-                                        <input type="text" name="bankName" id="" placeholder="" class="profile-bank">
+                                        <input type="text" name="bank" id="" placeholder="" class="profile-bank">
                                     </div>
                                     <div class="form-group profile_form-group ml-4">
                                         <label for="acct">Account</label>
@@ -29,7 +29,7 @@
                                 <div class="form-right">
                                     <div class="form-group profile_form-group">
                                         <label for="btc">Bitcoin</label>
-                                        <input type="text" name="btc" id="" placeholder="Foster" class="profile-btc">
+                                        <input type="text" name="btc" id="" placeholder="" class="profile-btc">
                                     </div>
                                     <div class="form-group profile_form-group">
                                         <label for="eth">Etherum</label>
@@ -37,7 +37,7 @@
                                     </div>
                                     <div class="form-group profile_form-group">
                                         <label for="ltc">Litcoin</label>
-                                        <input type="password" name="ltc" id="" class="profile-ltc">
+                                        <input type="text" name="ltc" id="" class="profile-ltc">
                                     </div>
                                 </div>
                             </div>

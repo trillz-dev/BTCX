@@ -21,26 +21,27 @@
                                 </div>
                             </div>
                         </div>
-    
-                        <form method="get" action="" class="security-form">
+
+                    <%- include ('../includes/messages.ejs') %> 
+                        <form method="post" action="/settings-security" class="security-form">
                             <div class="row-1">
                                 <div class="form-group profile_form-group">
                                     <label for="oldPassword">Old Password</label>
-                                    <input type="text" name="oldPassword" id="" placeholder="Enter your security question..." class="security-oldPassword">
+                                    <input type="password" name="oldPassword" id="" placeholder="" class="security-oldPassword">
                                 </div>  
                             </div>
 
                             <div class="row-2">
                                 <div class="form-group profile_form-group">
                                     <label for="newPassword">New Password</label>
-                                    <input type="text" name="newPassword" id="" placeholder="Enter your security question..." class="security-newPassword">
+                                    <input type="password" name="newPassword" id="" placeholder="" class="security-newPassword">
                                 </div>
                             </div>
 
                             <div class="row-3">
                                 <div class="form-group profile_form-group">
                                     <label for="confirmPassword">Confirm Password</label>
-                                    <input type="text" name="confirmPassword" id="" placeholder="Enter your security question..." class="security-confirmPassword">
+                                    <input type="password" name="confirmPassword" id="" placeholder="" class="security-confirmPassword">
                                 </div>
                             </div>
 
