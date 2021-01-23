@@ -568,12 +568,14 @@
   margin-bottom: 15px;
 }
 
-.profile-summary-bank-email {
+.profile-summary-bank-name,
+.profile-summary-bank-acct  {
   margin-bottom: 10px;
 }
 
-.profile-summary-bank-phone,
-.profile-summary-bank-email {
+.profile-summary-bank-name,
+.profile-summary-bank-acct,
+.profile-summary-bank-routing {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -638,7 +640,7 @@
 }
 
 
-/*  */
+/* Profile  */
 .setting-nav {
   display: flex;
   align-items: center;
@@ -729,6 +731,17 @@
   font-size: 14px;
 }
 
+[type= "password"] {
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+.text-label {
+  font-size: 14px;
+  color: #0F1222;
+  font-weight: 600;
+}
+
 .profile-edit-btn {
   margin-left: 70px;
   margin-top: 30px;
@@ -796,9 +809,16 @@
   margin-top: 50px;
 }
 
-.form-div-left {
-  margin-right: 30px;
+.form-sub-bank {
+  /* margin-right: 30px; */
   display: flex;
+}
+
+.bank-header,
+.crypto-header {
+  font-size: 20px;
+  color: #0F1222;
+  text-transform: capitalize;
 }
 
 .profile_form-group {
@@ -810,8 +830,7 @@
 .profile-bank, 
 .profile-acct,
 .profile-btc,
-.profile-eth,
-.profile-ltc {
+.profile-rtn {
   border: 1px solid #535875;
   height: 45px;
   border-radius: 5px;

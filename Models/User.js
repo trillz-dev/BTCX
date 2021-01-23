@@ -33,13 +33,10 @@ const UserSchema = new mongoose.Schema({
     acct: {
         type: Number,
     },
+    rtn: {
+        type: Number,
+    },
     btc: {
-        type: String,
-    },
-    eth: {
-        type: String,
-    },
-    ltc: {
         type: String,
     },
     resetPasswordToken: { 

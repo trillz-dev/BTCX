@@ -16,28 +16,28 @@
         
                         <form method="post" action="/settings-withdrawal" class="">
                             <div class="form-div">
-                                <div class="form-div-left">
+                                <h3 class="bank-header">bank details</h3>
+                                <div class="form-bank">
                                     <div class="form-group profile_form-group">
-                                        <label for="bank">Bank Name</label>
-                                        <input type="text" name="bank" id="" placeholder="" class="profile-bank">
+                                        <label for="bank" class="text-label">Bank Name</label>
+                                        <input type="text" name="bank" id="" required = "true" placeholder="" class="profile-bank">
                                     </div>
-                                    <div class="form-group profile_form-group ml-4">
-                                        <label for="acct">Account</label>
-                                        <input type="text" name="acct" id="" placeholder="" class="profile-acct">
+                                    <div class="form-sub-bank">
+                                        <div class="form-group profile_form-group">
+                                            <label for="acct" class="text-label">Account Number</label>
+                                            <input type="text" name="acct" id="" required = "true" placeholder="" class="profile-acct">
+                                        </div>
+                                        <div class="form-group profile_form-group ml-4">
+                                            <label for="rtn" class="text-label">Routing Number</label>
+                                            <input type="text" name="rtn" id="" placeholder="" required = "true" class="profile-rtn">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-right">
+                                <div class="form-crypto">
+                                    <h3 class="crypto-header">crypto details</h3>
                                     <div class="form-group profile_form-group">
-                                        <label for="btc">Bitcoin</label>
-                                        <input type="text" name="btc" id="" placeholder="" class="profile-btc">
-                                    </div>
-                                    <div class="form-group profile_form-group">
-                                        <label for="eth">Etherum</label>
-                                        <input type="text" name="eth" id="" class="profile-eth">
-                                    </div>
-                                    <div class="form-group profile_form-group">
-                                        <label for="ltc">Litcoin</label>
-                                        <input type="text" name="ltc" id="" class="profile-ltc">
+                                        <label for="btc" class="text-label">Bitcoin</label>
+                                        <input type="text" name="btc" id="" required = "true" placeholder="" class="profile-btc">
                                     </div>
                                 </div>
                             </div>

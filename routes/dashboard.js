@@ -98,10 +98,8 @@ router.get('/settings', ensureAuthenticated, (req, res, next) => {
         userLast: req.user.lastName,
         userBank: req.user.bank,
         userAcct: req.user.acct,
-        userAcct: req.user.acct,
+        userRTN: req.user.rtn,
         userBTC: req.user.btc,
-        userETH: req.user.eth,
-        userLTC: req.user.ltc
     });
 });
 
@@ -130,18 +128,16 @@ router.get('/settings-withdrawal', ensureAuthenticated, (req, res, next) => {
         userLast: req.user.lastName,
         userBank: req.user.bank,
         userAcct: req.user.acct,
-        userAcct: req.user.acct,
+        userRTN: req.user.rtn,
         userBTC: req.user.btc,
-        userETH: req.user.eth,
-        userLTC: req.user.ltc
     });
 });
 
 router.post('/settings-withdrawal', (req, res, next) => {
 
-    const { bank, acct, btc, eth, ltc } = req.body;
+    const { bank, acct, btc, rtn } = req.body;
 
-    User.updateOne({ _id: req.user._id }, { bank: bank, acct: acct, btc: btc, eth: eth, ltc: ltc })
+    User.updateOne({ _id: req.user._id }, { bank: bank, acct: acct, btc: btc, rtn: rtn })
     .then(data => {
         if (!data) {
             console.log('Error')
@@ -164,10 +160,8 @@ router.get('/settings-security', ensureAuthenticated, (req, res, next) => {
         userLast: req.user.lastName,
         userBank: req.user.bank,
         userAcct: req.user.acct,
-        userAcct: req.user.acct,
+        userRTN: req.user.rtn,
         userBTC: req.user.btc,
-        userETH: req.user.eth,
-        userLTC: req.user.ltc
     });
 });
 
