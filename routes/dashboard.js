@@ -107,11 +107,55 @@ router.get('/bch-deposit', ensureAuthenticated, (req, res, next) => {
     });
 });
 
+router.post('/bch-deposit', ensureAuthenticated, (req, res, next) => {
+    const { desc, amtInput } = req.body;
+
+    const deposit =  {
+        desc,
+        amount: amtInput
+    }
+
+    User.findById({_id: req.user._id})
+    .then(data => {
+        if (!data) {
+            console.log('Error')
+        } else {
+            data.trans.push(deposit);
+
+            data.save();
+            res.redirect('/transaction')
+        }
+    })
+    .catch(err => next(err));
+});
+
 router.get('/eth-deposit', ensureAuthenticated, (req, res, next) => {
     res.render('dashboard/eth-deposit', {
         pageTitle: 'Deposit',
         path: '/eth-deposit'
     });
+});
+
+router.post('/eth-deposit', ensureAuthenticated, (req, res, next) => {
+    const { desc, amtInput } = req.body;
+
+    const deposit =  {
+        desc,
+        amount: amtInput
+    }
+
+    User.findById({_id: req.user._id})
+    .then(data => {
+        if (!data) {
+            console.log('Error')
+        } else {
+            data.trans.push(deposit);
+
+            data.save();
+            res.redirect('/transaction')
+        }
+    })
+    .catch(err => next(err));
 });
 
 router.get('/withdraw', ensureAuthenticated, (req, res, next) => {
