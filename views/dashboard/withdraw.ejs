@@ -8,43 +8,79 @@
             <div class="withdraw-container">
                 <div class="withdraw-card">
                     <div>
-                        <h1 class="withdraw-title">Payment will be sent through your selected method.</h1>
+                        <h1 class="withdraw-title">Choose withdraw method.</h1>
                     </div>
                     
-                    <div class="withdraw-option">
-                        <div class="withdraw-btc">
-                            <a href="./withdraw-btc" class="withdraw-link">
-                                <span class="withdraw-image">
-                                    <img src="/public/images/bank-img.png" class="withdraw-img" alt="">
-                                </span>
-                                withdraw to bank
-                            </a>
+                    <nav>
+                        <div class="nav nav-tabs with-tablist" id="nav-tab" role="tablist">
+                            <a class="nav-link active with-tab" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Bank</a>
+                            <a class="nav-link with-tab" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Bitcoin</a>
                         </div>
-                        <div class="withdraw-btc">
-                            <a href="./withdraw-btc" class="withdraw-link">
-                                <span class="withdraw-image">
-                                    <img src="/public/images/btc-img.png" class="withdraw-img" alt="">
-                                </span>
-                                withdraw to bitcoin wallet
-                            </a>
-                        </div>
-                        <!-- <div class="withdraw-bch">
-                            <a href="" class="withdraw-link">
-                                <span class="withdraw-image">
-                                    <img src="/images/BCH-img.png" class="withdraw-img" alt="">
-                                </span>
-                                withdraw to bitcoin cash wallet
-                            </a>
-                        </div> -->
-                        <!-- <div class="withdraw-eth">
-                            <a href="" class="withdraw-link">
-                                <span class="withdraw-image">
-                                    <img src="/images/ETH-img.png" class="withdraw-img" alt="">
-                                </span>
-                                withdraw to etherum wallet
-                            </a>
-                        </div> -->
+                    </nav>
+                    
+                    <div class="tab-content" id="nav-tabContent">
+                        <form method="post" action="" class="tab-pane fade show active mt-4" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <div class="with-bank">
+                                <div class="form-group with_form-group">
+                                    <label for="bank" class="text-label">Bank Name <span class="req">*</span></label>
+                                    <input type="text" name="bank" id="" required = "true" placeholder="" class="profile-bank">
+                                </div>
+                                <div class="form-group with_form-group">
+                                    <label for="acct" class="text-label">Account Number <span class="req">*</span></label>
+                                    <input type="text" name="acct" id="" required = "true" placeholder="" class="profile-acct">
+                                </div>
+                                <div class="form-group with_form-group">
+                                    <label for="rtn" class="text-label">Routing Number <span class="req">*</span></label>
+                                    <input type="text" name="rtn" id="" placeholder="" required = "true" class="profile-rtn">
+                                </div>
+                                <button type="submit" class="btn btn-primary btc-submit mt-4" id="withdraw">Confirm Withdraw</button>
+                            </div>
+                            <hr>
+                            <div class="with-footer">
+                                <div class="avail-bal">
+                                    <p class="avail-title">Available Balance:</p>
+                                    <p class="avil-amount">$0</p>
+                                </div>
+                                <hr>
+                                <div class="with-fee">
+                                    <p class="fee-title">Withdrawal Fee:</p>
+                                    <p class="fee-amount">$0</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </form>
+                        <form method="post" action="" class="tab-pane fade mt-4" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div class="with-bank">
+                                <div class="form-group with_form-group">
+                                    <label for="bank" class="text-label">Bitcoin Address <span class="req">*</span></label>
+                                    <input type="text" name="bank" id="" required = "true" placeholder="" class="profile-bank">
+                                </div>
+                                <div class="form-group with_form-group">
+                                    <label for="acct" class="text-label">Amount <span class="req">*</span></label>
+                                    <input type="text" name="acct" id="" required = "true" placeholder="" class="profile-acct">
+                                </div>
+                                <div class="form-group with_form-group">
+                                    <label for="rtn" class="text-label">Reference Note (optional)</label>
+                                    <input type="text" name="rtn" id="" placeholder="" required = "true" class="profile-rtn">
+                                </div>
+                                <button type="submit" class="btn btn-primary btc-submit mt-4" id="withdraw">Confirm Withdraw</button>
+                            </div>
+                            <hr>
+                            <div class="with-footer">
+                                <div class="avail-bal">
+                                    <p class="avail-title">Available Balance:</p>
+                                    <p class="avil-amount">$0</p>
+                                </div>
+                                <hr>
+                                <div class="with-fee">
+                                    <p class="fee-title">Withdrawal Fee:</p>
+                                    <p class="fee-amount">$0</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </form>
                     </div>
+                      
                 </div>
             </div>
         </section>

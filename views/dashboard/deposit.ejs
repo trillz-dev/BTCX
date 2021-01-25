@@ -8,14 +8,14 @@
             <div class="deposit-container">
                 <div class="deposit-card">
                     <div>
-                        <h1 class="deposit-title">How would you like to add money to your trading wallet?</h1>
+                        <h1 class="deposit-title">Choose deposit method.</h1>
                     </div>
 
                     <div>
-                        <p class="deposit-sub-title">All deposit methods will deposit directly to your USD Wallet</p>
+                        <p class="deposit-sub-title">All deposit methods will reflect directly into your USD Wallet</p>
                     </div>
                     
-                    <div class="deposit-option">
+                    <!-- <div class="deposit-option">
                         <div class="deposit-btc">
                             <a href="/btc-deposit" class="deposit-link">
                                 <span class="deposit-image">
@@ -40,6 +40,103 @@
                                 etherum
                             </a>
                         </div>
+                    </div> -->
+
+                    <nav>
+                        <div class="nav nav-tabs dep-tablist" id="nav-tab" role="tablist">
+                            <a class="nav-link active dep-tab" id="nav-btc-tab" data-toggle="tab" href="#deposit-btc" role="tab" aria-controls="nav-home" aria-selected="true">Bicoin</a>
+                            <a class="nav-link with-tab" id="nav-eth-tab" data-toggle="tab" href="#deposit-eth" role="tab" aria-controls="nav-profile" aria-selected="false">Etherum</a>
+                            <!-- <a class="nav-link with-tab" id="nav-bch-tab" data-toggle="tab" href="#deposit-bch" role="tab" aria-controls="nav-profile" aria-selected="false">Bitcoin Cash</a> -->
+                        </div>
+                    </nav>
+                    
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active mt-4" id="deposit-btc" role="tabpanel" aria-labelledby="nav-btc-tab">
+                            <div class="btc-header">
+                                <!-- <h1 class="btc-title">Bitcoin Wallet</h1> -->
+                                <p class="btc-wallet">3LyocEjDBE8Szk2t9DuiGiS18Jf35rezVi</p>
+                            </div>
+                            <div class="btc-sub-header">
+                                <p class="btc-sub-title">Send your BTC to this address and upload a proof of payment, we will verify your payment in 1hr. </p>
+                            </div>
+
+                            <form method="post" action="/btc-deposit" class="dep-btc mt-4">
+                                <div class="form-group btc-amount" hidden>
+                                    <label for="desc">Status</label>
+                                    <input id="deposit-title-input" class="form-control" type="text" name="desc" value="Deposit">
+                                </div>
+        
+                                <div class="form-group btc-amount">
+                                    <label for="amtInput">Amount <span class="req">*</span></label>
+                                    <input id="deposit-amount-input" class="form-control" type="text" name="amtInput" placeholder="Minimum $500" required>
+                                </div>
+                
+                                <div class="form-group">
+                                    <label for="img-deposit">Upload payment image <span class="req">*</span></label>
+                                    <input id="my-input" class="form-control-file" type="file" name="img-deposit">
+                                </div>
+                
+                                <button type="submit" class="btn btn-primary btc-submit" id="add-deposit">Confirm Deposit</button>
+                            </form>
+                        </div>
+
+                        <div class="tab-pane fade mt-4" id="deposit-eth" role="tabpanel" aria-labelledby="nav-eth-tab">
+                            <div class="eth-header">
+                                <!-- <h1 class="eth-title">Etherum Wallet</h1> -->
+                                <p class="eth-wallet">3LyocEjDBE8Szk2t9DuiGiS18Jf35rezVi</p>
+                            </div>
+                            <div class="eth-sub-header">
+                                <p class="eth-sub-title">Send your ETH to this address and upload a proof of payment, we will verify your payment in 1hr. </p>
+                            </div>
+
+                            <form method="post" action="/eth-deposit" class="dep-eth mt-4">
+                                <div class="form-group eth-amount" hidden>
+                                    <label for="desc">Status</label>
+                                    <input id="deposit-title-input" class="form-control" type="text" name="desc" value="Deposit">
+                                </div>
+        
+                                <div class="form-group eth-amount">
+                                    <label for="amtInput">Amount <span class="req">*</span></label>
+                                    <input id="deposit-amount-input" class="form-control" type="text" name="amtInput" placeholder="Minimum $500" required>
+                                </div>
+                
+                                <div class="form-group">
+                                    <label for="img-deposit">Upload payment image <span class="req">*</span></label>
+                                    <input id="my-input" class="form-control-file" type="file" name="img-deposit" >
+                                </div>
+                
+                                <button type="submit" class="btn btn-primary eth-submit" id="add-deposit">Confirm Deposit</button>
+                            </form>
+                        </div>
+
+                        <!-- <div class="tab-pane fade" id="deposit-bch" role="tabpanel" aria-labelledby="nav-bch-tab">
+                            <div class="bch-header">
+                                <h1 class="bch-title">Bitcoin Cash Wallet</h1>
+                                <p class="bch-wallet">3LyocEjDBE8Szk2t9DuiGiS18Jf35rezVi</p>
+                            </div>
+                            <div class="bch-sub-header">
+                                <p class="bch-sub-title">Send your BCH to this address and upload a proof of payment, we will verify your payment in 1hr. </p>
+                            </div>
+
+                            <form method="post" action="" class="dep-bank mt-4">
+                                <div class="form-group bch-amount" hidden>
+                                    <label for="desc">Status</label>
+                                    <input id="deposit-title-input" class="form-control" type="text" name="desc" value="Deposit">
+                                </div>
+        
+                                <div class="form-group bch-amount">
+                                    <label for="amtInput">Amount <span class="req">*</span></label>
+                                    <input id="deposit-amount-input" class="form-control" type="text" name="amtInput" placeholder="Minimum $500" required>
+                                </div>
+                
+                                <div class="form-group">
+                                    <label for="img-deposit">Upload payment image <span class="req">*</span></label>
+                                    <input id="my-input" class="form-control-file" type="file" name="img-deposit" >
+                                </div>
+                
+                                <button type="submit" class="btn btn-primary bch-submit" id="add-deposit">Confirm Deposit</button>
+                            </form>
+                        </div> -->
                     </div>
                 </div>
             </div>

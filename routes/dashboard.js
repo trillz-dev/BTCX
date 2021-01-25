@@ -71,13 +71,6 @@ router.get('/deposit', ensureAuthenticated, (req, res, next) => {
     });
 });
 
-router.get('/btc-deposit', ensureAuthenticated, (req, res, next) => {
-    res.render('dashboard/btc-deposit', {
-        pageTitle: 'Deposit',
-        path: '/btc-deposit'
-    });
-});
-
 router.post('/btc-deposit', ensureAuthenticated, (req, res, next) => {
     const { desc, amtInput } = req.body;
 
@@ -100,13 +93,6 @@ router.post('/btc-deposit', ensureAuthenticated, (req, res, next) => {
     .catch(err => next(err));
 });
 
-router.get('/bch-deposit', ensureAuthenticated, (req, res, next) => {
-    res.render('dashboard/bch-deposit', {
-        pageTitle: 'Deposit',
-        path: '/bch-deposit'
-    });
-});
-
 router.post('/bch-deposit', ensureAuthenticated, (req, res, next) => {
     const { desc, amtInput } = req.body;
 
@@ -127,13 +113,6 @@ router.post('/bch-deposit', ensureAuthenticated, (req, res, next) => {
         }
     })
     .catch(err => next(err));
-});
-
-router.get('/eth-deposit', ensureAuthenticated, (req, res, next) => {
-    res.render('dashboard/eth-deposit', {
-        pageTitle: 'Deposit',
-        path: '/eth-deposit'
-    });
 });
 
 router.post('/eth-deposit', ensureAuthenticated, (req, res, next) => {
