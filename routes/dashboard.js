@@ -8,6 +8,8 @@ const { ensureAuthenticated } = require('../config/auth')
 // User model 
 const User = require('../Models/User');
 
+
+
 router.get('/main', ensureAuthenticated, (req, res, next) => {
     request('https://coinlib.io/api/v1/coinlist?key=9b79bb5181f4b204', (error, response, body) => {
         
@@ -46,10 +48,20 @@ router.get('/investment', ensureAuthenticated, (req, res, next) => {
 });
 
 router.get('/transaction', ensureAuthenticated, (req, res, next) => {
-    res.render('dashboard/transaction', {
-        pageTitle: 'Transactions',
-        path: '/transaction'
-    });
+    User.findById({_id: req.user._id})
+    .then(data => {
+        if (!data) {
+            console.log('Error')
+        } else {
+            let list = data.trans
+            res.render('dashboard/transaction', {
+                pageTitle: 'Transactions',
+                path: '/transaction',
+                list
+            });
+        }
+    })
+    .catch(err => next(err));
 });
 
 router.get('/deposit', ensureAuthenticated, (req, res, next) => {
@@ -64,6 +76,28 @@ router.get('/btc-deposit', ensureAuthenticated, (req, res, next) => {
         pageTitle: 'Deposit',
         path: '/btc-deposit'
     });
+});
+
+router.post('/btc-deposit', ensureAuthenticated, (req, res, next) => {
+    const { desc, amtInput } = req.body;
+
+    const deposit =  {
+        desc,
+        amount: amtInput
+    }
+
+    User.findById({_id: req.user._id})
+    .then(data => {
+        if (!data) {
+            console.log('Error')
+        } else {
+            data.trans.push(deposit);
+
+            data.save();
+            res.redirect('/transaction')
+        }
+    })
+    .catch(err => next(err));
 });
 
 router.get('/bch-deposit', ensureAuthenticated, (req, res, next) => {

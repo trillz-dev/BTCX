@@ -5,25 +5,33 @@
     <div class="content-wrapper">
 
         <section class="deposit-section">
-            <div class="deposit-container">
-                <div class="deposit-card">
+            <div class="btc-deposit-container">
+                <div class="btc-deposit-card">
                     <div class="btc-header">
                         <h1 class="btc-title">Bitcoin Wallet</h1>
                         <p class="btc-wallet">3LyocEjDBE8Szk2t9DuiGiS18Jf35rezVi</p>
                     </div>
+                    <div class="btc-sub-header">
+                        <p class="btc-sub-title">Send your BTC to this address and upload a proof of payment, we will verify your payment in 1hr. </p>
+                    </div>
                     
-                    <form method="get" action="" class="mt-4 mb-4">
+                    <form method="post" action="/btc-deposit" class="mt-4 mb-4">
+                        <div class="form-group btc-amount" hidden>
+                            <label for="desc">Status</label>
+                            <input id="deposit-title-input" class="form-control" type="text" name="desc" value="Deposit">
+                        </div>
+
                         <div class="form-group btc-amount">
-                            <label for="my-input">Amount</label>
-                            <input id="my-input" class="form-control" type="text" name="">
+                            <label for="amtInput">Amount <span class="req">*</span></label>
+                            <input id="deposit-amount-input" class="form-control" type="text" name="amtInput" placeholder="Minimum $500" required>
                         </div>
         
                         <div class="form-group">
-                            <label for="my-input">Upload payment image</label>
-                            <input id="my-input" class="form-control-file" type="file" name="">
+                            <label for="img-deposit">Upload payment image <span class="req">*</span></label>
+                            <input id="my-input" class="form-control-file" type="file" name="img-deposit">
                         </div>
         
-                        <button type="submit" class="btn btn-primary btc-submit">Confirm Deposit</button>
+                        <button type="submit" class="btn btn-primary btc-submit" id="add-deposit">Confirm Deposit</button>
                     </form>
                 </div>
             </div>

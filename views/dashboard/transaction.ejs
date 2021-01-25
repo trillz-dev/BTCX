@@ -19,32 +19,21 @@
                             <th scope="col">Transaction ID</th>
                             <th scope="col">Description</th>
                             <th scope="col">Status</th>
+                            <th scope="col">Currency</th>
                             <th scope="col">Amount</th>
                             <th scope="col">Date</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Deposit</td>
-                            <td>Successful</td>
-                            <td>$500</td>
-                            <td>11-21-2020</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Deposit</td>
-                            <td>Successful</td>
-                            <td>$5000</td>
-                            <td>11-23-2020</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Withdrawal</td>
-                            <td>Pending</td>
-                            <td>$15000</td>
-                            <td>12-3-2020</td>
-                          </tr>
+                          <% list.slice().reverse().forEach(function(item, index) { %>
+                            <tr class="list">
+                              <th scope="row"><%= item._id %></th>
+                              <td><%= item.desc %></td>
+                              <td><%= item.status %></td> 
+                              <td>$<%= item.amount %></td>
+                              <td><%= item.date %></td>
+                            </tr>
+                          <% }) %>
                         </tbody>
                     </table>
                 </div>

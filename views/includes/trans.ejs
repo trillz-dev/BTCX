@@ -1,0 +1,27 @@
+<% list.forEach(function(item, index) { %>
+    <tr class="list">
+      <th scope="row"><%= item._id %></th>
+      <td><%= item.desc %></td>
+      <td><%= item.status %></td> 
+      <td>$<%= item.amount %></td>
+    </tr>
+  <% }) %>
+
+
+
+
+
+
+
+
+  <% let listArray = <%= list %>
+                          <% function item () { %>
+                            <%  for (i = listArray.length; 1 >=0; i--) { %>
+                                  <tr class="list">
+                                    <th scope="row"><%= [i]._id %></th>
+                                    <td><%= listArray[i].desc %></td>
+                                    <td><%= listArray[i].status %></td> 
+                                    <td>$<%= listArray[i].amount %></td>
+                                  </tr>
+                            <%  } %>
+                          <% } %>

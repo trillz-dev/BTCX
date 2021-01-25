@@ -1,52 +1,94 @@
 const mongoose = require('mongoose');
-var passportLocalMongoose = require('passport-local-mongoose');
+const Schema = mongoose.Schema
+let passportLocalMongoose = require('passport-local-mongoose');
+const shortid = require('shortid')
 
-const UserSchema = new mongoose.Schema({
-    firstName: {
+let curday = function(){
+    today = new Date();
+    let dd = today.getDate();
+    let mm = today.getMonth()+1; //As January is 0.
+    let yyyy = today.getFullYear();
+    
+    if(dd<10) dd='0'+dd;
+    if(mm<10) mm='0'+mm;
+    return (`${mm} - ${dd} - ${yyyy}`);
+    };
+
+    const reqString = {
         type: String,
         required: true
-    },
-    lastName: {
-        type: String,
-        required: true
-    },
-    email: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    number: {
+    }
+
+    const reqNum = {
         type: Number,
-        required: true,
-    },
-    password: {
-        type: String,
         required: true
+    }
+    const uuid = {
+        type: String,
+        default: shortid.generate
+    }
+
+const transSchema = new Schema({
+    _id: uuid,
+    desc: reqString,
+    status: {
+        type: String,
+        default: 'Pending'
     },
+    amount: reqNum,
+    date: {
+        type: String,
+        default: curday
+    }
+})
+
+const UserSchema = new Schema({
+    firstName: reqString,
+    lastName: reqString,
+    email: reqString,
+    number: reqNum,
+    password: reqString,
     date: {
         type: Date,
         default: Date.now
     },
-    bank: {
-        type: String,
-    },
-    acct: {
-        type: Number,
-    },
-    rtn: {
-        type: Number,
-    },
-    btc: {
-        type: String,
-    },
+    bank: String,
+    rtn: Number,
+    btc: Number,
     resetPasswordToken: { 
         data: String 
     },
     resetPasswordExpires: {
         type: Date
-    }
+    },
+
+    trans: [transSchema]
     
 });
+// console.log(UserSchema)
+
+
+
+// // TRANSACTION
+
+// const session = mongoose.startSession();
+// session.startTransaction();
+
+// UserSchema.create([
+//         {
+//             uuid: String,
+//             desc: {
+//                 type: String
+//             },
+//             status: String,
+//             amount: 'Number',
+//             date: {
+//                 type: 'Date',
+//                 default: 'curday'
+//             }
+//         }
+//     ])
+
 
 
 // The below is used so as to allow passport to reset password
