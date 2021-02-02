@@ -223,22 +223,29 @@
   align-items: flex-start;
   margin-bottom: -10px;
 }
-.invest-title {
+/* .invest-title {
   font-size: 20px !important;
-}
+} */
 .invest-body {
   color: rgb(70, 72, 85);
   margin-bottom: 30px;
 }
 .invest-row {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 400px;
+  justify-content: center;
+  /* align-items: ; */
+  /* width: 400px; */
 }
 .invest-sub-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
+}
+.invest-bal ,
+.roi-bal {
+  font-size: 16px;
+}
+.invest-col-1 {
+  margin-right: 220px;
 }
 
 
@@ -580,6 +587,103 @@
 
 }
 
+/* INVEST SECTION */
+
+.invest-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.invest-container {
+  width: 550px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);
+}
+.invest-card {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+.invest-title {
+  font-weight: bold;
+  width: 400px;
+  font-size: 26px;
+  line-height: 1.3;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.invest-duration {
+  font-weight: 500;
+  width: 400px;
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: green;
+}
+.invest-tablist {
+  width: 400px;
+}
+.invest-tab {
+  width: 200px;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.invest_form-group {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+.avail-bal,
+.with-fee {
+  display: flex;
+  justify-content: space-between;
+  width: 380px;
+  height: 15px;
+  margin-top: -10px;
+}
+.invest-img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+@media screen and ( max-width: 500px ) {
+  .withdraw-container {
+    width: 330px;
+  }
+  .withdraw-card {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  .withdraw-title {
+    width: 320px;
+    font-size: 20px;
+  }
+  .with-tablist {
+    width: 330px;
+  }
+  .with-tab {
+    width: 165px;
+    font-size: 16px;
+    font-weight: bolder;
+  }
+  .with_form-group {
+    width: 300px;
+  }
+  .avail-bal,
+  .with-fee {
+    width: 280px;
+  }
+
+}
+
 
 
 /* SETTINGS PAGE */
@@ -846,6 +950,13 @@
   padding-left: 15px;
   padding-right: 15px;
   font-size: 14px;
+}
+[type= "select"] {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 13px;
+  color: #0F1222;
+  font-weight: 600;
 }
 .text-label {
   font-size: 14px;

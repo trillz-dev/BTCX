@@ -14,19 +14,19 @@ let curday = function(){
     return (`${mm} - ${dd} - ${yyyy}`);
     };
 
-    const reqString = {
-        type: String,
-        required: true
-    }
+const reqString = {
+    type: String,
+    required: true
+};
 
-    const reqNum = {
-        type: Number,
-        required: true
-    }
-    const uuid = {
-        type: String,
-        default: shortid.generate
-    }
+const reqNum = {
+    type: Number,
+    required: true
+};
+const uuid = {
+    type: String,
+    default: shortid.generate
+};
 
 const transSchema = new Schema({
     _id: uuid,
@@ -39,8 +39,13 @@ const transSchema = new Schema({
     date: {
         type: String,
         default: curday
+    },
+    img: {
+        data: Buffer,
+        contentType: String
     }
-})
+});
+
 
 const UserSchema = new Schema({
     firstName: reqString,
@@ -61,34 +66,20 @@ const UserSchema = new Schema({
     resetPasswordExpires: {
         type: Date
     },
-
-    trans: [transSchema]
-    
+    trans: [transSchema],
+    availBal: {
+        type: Number,
+        default: 0.00
+        },
+    investBal: {
+        type: Number,
+        default: 0.00
+    },
+    roiBal: {
+        type: Number,
+        default: 0.00
+    }
 });
-// console.log(UserSchema)
-
-
-
-// // TRANSACTION
-
-// const session = mongoose.startSession();
-// session.startTransaction();
-
-// UserSchema.create([
-//         {
-//             uuid: String,
-//             desc: {
-//                 type: String
-//             },
-//             status: String,
-//             amount: 'Number',
-//             date: {
-//                 type: 'Date',
-//                 default: 'curday'
-//             }
-//         }
-//     ])
-
 
 
 // The below is used so as to allow passport to reset password

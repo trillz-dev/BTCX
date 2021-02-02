@@ -40,10 +40,7 @@
                                         <div class="card-header border-0">
                                             <div class="custom-title-wrap bar-success wallet-card-wrap">
                                                 <div class="custom-title wallet-title">WALLET</div>
-                                                <!-- <div class="custom-post-title">0.00000434 BTC</div> -->
                                                 <div class=" widget-action-link ml-5">
-                                                    <!-- <div class="text-warning weight700">$5,679</div> -->
-                                                    <!-- <small class="text-muted">$25</small> -->
                                                 <img src="/public/images/usd.jpg" alt="" srcset="" style="width: 40px;" class="wallet-img">
                                                 </div>
                                             </div>
@@ -51,9 +48,7 @@
                                         <div class="card-body" >
                                             <div class="wallet-body">
                                                 <h3 class="bal-text">Available Balance</h3>
-                                                <h4 class="curr-bal">0.00 
-                                                    <span>USD</span>
-                                                </h4>
+                                                <h4 class="curr-bal"><span>$</span><%= availBal %></h4>
                                             </div>
                                             <div class="wallet-button">
                                                 <a href="/withdraw">
@@ -70,11 +65,8 @@
                                     <div class="card card-shadow mb-4">
                                         <div class="card-header border-0">
                                             <div class="custom-title-wrap bar-success invest-card-wrap">
-                                                <div class="custom-title invest-title">INVESTMENT SUMMARY</div>
-                                                <!-- <div class="custom-post-title">0.00000434 LTC</div> -->
-                                                <div class=" widget-action-link">
-                                                    <!-- <div class="text-info weight700">$4,364</div> -->
-                                                    <!-- <small class="text-muted">$25</small> -->
+                                                <div class="custom-title wallet-title">INVESTMENT SUMMARY</div>
+                                                <div class=" widget-action-link ml-5">
                                                 <img src="/public/images/invest-img.jpg" alt="" srcset="" style="width: 50px;" class="wallet-img">
                                                 </div>
                                             </div>
@@ -82,22 +74,18 @@
                                         <div class="card-body">
                                             <div class="invest-body">
                                                 <div class="invest-row">
-                                                    <div class="invest-col">
+                                                    <div class="invest-col-1">
                                                         <h3 class="invest-sub-title">Amount</h3>
-                                                        <h4 class="curr-bal">0.00 
-                                                            <span>USD</span>
-                                                        </h4>
+                                                        <h4 class="invest-bal"><span>$</span><%= investBal %></h4>
                                                     </div>
                                                     <div class="invest-col">
                                                         <h3 class="invest-sub-title">ROI %</h3>
-                                                        <h4 class="curr-bal">0.00 
-                                                            <span>USD</span>
-                                                        </h4>
+                                                        <h4 class="roi-bal"><span>$</span><%= roiBal %></h4>
                                                     </div>                                                   
                                                 </div>
                                             </div>
                                             <div class="invest-button">
-                                                <a href="/withdraw">
+                                                <a href="/invest">
                                                     <button class="btn btn-primary btn-withdraw">Activate</button>
                                                 </a>
                                             </div>

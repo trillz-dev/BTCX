@@ -13,13 +13,13 @@
                     
                     <nav>
                         <div class="nav nav-tabs with-tablist" id="nav-tab" role="tablist">
-                            <a class="nav-link active with-tab" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Bank</a>
-                            <a class="nav-link with-tab" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Bitcoin</a>
+                            <a class="nav-link active with-tab" id="nav-bank-tab" data-toggle="tab" href="#with-bank" role="tab" aria-controls="with-bank" aria-selected="true">Bank</a>
+                            <a class="nav-link with-tab" id="nav-btc-tab" data-toggle="tab" href="#with-btc" role="tab" aria-controls="with-btc" aria-selected="false">Bitcoin</a>
                         </div>
                     </nav>
                     
                     <div class="tab-content" id="nav-tabContent">
-                        <form method="post" action="/bank-withdraw" class="tab-pane fade show active mt-4" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <form method="post" action="/bank-withdraw" class="tab-pane fade show active mt-4" id="with-bank" role="tabpanel" aria-labelledby="nav-bank-tab">
                             <div class="with-bank">
                                 <div class="form-group" hidden>
                                     <input id="deposit-title-input" class="form-control" type="text" name="desc" value="Bank tranfser">
@@ -37,7 +37,7 @@
                                     <input type="number" name="with-rtn" id="" placeholder="" required = "true" class="input-style">
                                 </div>
                                 <div class="form-group with_form-group">
-                                    <label for="amtInput">Amount <span class="req">*</span></label>
+                                    <label for="amtInput" class="text-label">Amount <span class="req">*</span></label>
                                     <input id="withdraw-amount-input" class="form-control input-style" type="number" name="amtInput" placeholder="Minimum $500" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary btc-submit mt-4" id="withdraw">Confirm Withdraw</button>
@@ -46,7 +46,7 @@
                             <div class="with-footer">
                                 <div class="avail-bal">
                                     <p class="avail-title">Available Balance:</p>
-                                    <p class="avil-amount">$0</p>
+                                    <p class="avail-amount"><span>$</span><%= availBal %></p>
                                 </div>
                                 <hr>
                                 <div class="with-fee">
@@ -56,7 +56,7 @@
                             </div>
                             <hr>
                         </form>
-                        <form method="post" action="/btc-withdraw" class="tab-pane fade mt-4" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <form method="post" action="/btc-withdraw" class="tab-pane fade mt-4" id="with-btc" role="tabpanel" aria-labelledby="nav-btc-tab">
                             <div class="with-btc">
                                 <div class="form-group" hidden>
                                     <input id="deposit-title-input" class="form-control" type="text" name="desc" value="BTC tranfser">
@@ -66,7 +66,8 @@
                                     <input type="text" name="bank" id="" required = "true" placeholder="" class="input-style">
                                 </div>
                                 <div class="form-group with_form-group">
-                                    <label for="amtInput">Amount <span class="req">*</span></label>
+                                        <option value="">Premium Plan ($500)</option>
+                                        <label for="amtInput" class="text-label">Amount <span class="req">*</span></label>
                                     <input id="withdraw-amount-input" class="form-control input-style" type="number" name="amtInput" placeholder="Minimum $500" required>
                                 </div>
                                 <div class="form-group with_form-group">
@@ -79,7 +80,7 @@
                             <div class="with-footer">
                                 <div class="avail-bal">
                                     <p class="avail-title">Available Balance:</p>
-                                    <p class="avil-amount">$0</p>
+                                    <p class="avil-amount"><span>$</span><%= availBal %></p>
                                 </div>
                                 <hr>
                                 <div class="with-fee">

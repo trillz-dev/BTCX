@@ -23,10 +23,12 @@ router.get('/main', ensureAuthenticated, (req, res, next) => {
         let USDT = parseFloat(data.coins[6].price).toFixed(6);
         let XLM = parseFloat(data.coins[9].price).toFixed(6);
 
-
         res.render('dashboard/main', {
             pageTitle: 'Dashboard',
             path: '/main',
+            availBal: req.user.availBal,
+            investBal: req.user.investBal,
+            roiBal: req.user.roiBal,
             BTC,
             ETH,
             XRP,
@@ -118,7 +120,8 @@ router.post('/eth-deposit', ensureAuthenticated, (req, res, next) => {
 router.get('/withdraw', ensureAuthenticated, (req, res, next) => {
     res.render('dashboard/withdraw', {
         pageTitle: 'Withdraw',
-        path: '/withdraw'
+        path: '/withdraw',
+        availBal: req.user.availBal
     });
 });
 
@@ -145,6 +148,58 @@ router.post('/bank-withdraw', ensureAuthenticated, (req, res, next) => {
 });
 
 router.post('/btc-withdraw', ensureAuthenticated, (req, res, next) => {
+    const { desc, amtInput } = req.body;
+
+    const deposit =  {
+        desc,
+        amount: amtInput
+    }
+
+    User.findById({_id: req.user._id})
+    .then(data => {
+        if (!data) {
+            console.log('Error')
+        } else {
+            data.trans.push(deposit);
+
+            data.save();
+            res.redirect('/transaction')
+        }
+    })
+    .catch(err => next(err));
+});
+
+router.get('/invest', ensureAuthenticated, (req, res, next) => {
+    res.render('dashboard/invest', {
+        pageTitle: 'Activate-investment',
+        path: '/invest',
+        availBal: req.user.availBal
+    });
+});
+
+router.post('/invest-buy', ensureAuthenticated, (req, res, next) => {
+    const { desc, amtInput } = req.body;
+
+    const deposit =  {
+        desc,
+        amount: amtInput
+    }
+
+    User.findById({_id: req.user._id})
+    .then(data => {
+        if (!data) {
+            console.log('Error')
+        } else {
+            data.trans.push(deposit);
+
+            data.save();
+            res.redirect('/transaction')
+        }
+    })
+    .catch(err => next(err));
+});
+
+router.post('/invest-sell', ensureAuthenticated, (req, res, next) => {
     const { desc, amtInput } = req.body;
 
     const deposit =  {

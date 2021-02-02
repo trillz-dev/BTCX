@@ -1,0 +1,106 @@
+<%- include('../includes/dashboard-header.ejs') %>
+
+
+    <!--main content wrapper-->
+    <div class="content-wrapper">
+
+        <section class="invest-section">
+            <div class="invest-container">
+                <div class="invest-card">
+                    <div>
+                        <h1 class="invest-title">Automated Crypto Investment Made Simple.</h1>
+                    </div>
+                    
+                    <nav>
+                        <div class="nav nav-tabs invest-tablist" id="nav-tab" role="tablist">
+                            <a class="nav-link active invest-tab" id="nav-buy-tab" data-toggle="tab" href="#invest-buy" role="tab" aria-controls="invest-buy" aria-selected="true">Buy</a>
+                            <a class="nav-link with-tab" id="nav-sell-tab" data-toggle="tab" href="#invest-sell" role="tab" aria-controls="invest-sell" aria-selected="false">Sell</a>
+                        </div>
+                    </nav>
+                    
+                    <div class="tab-content" id="nav-tabContent">
+                        <form method="post" action="/invest-buy" class="tab-pane fade show active mt-4" id="invest-buy" role="tabpanel" aria-labelledby="nav-buy-tab">
+                            <div>
+                                <p class="invest-duration">Investment Duration: 7 days </p>
+                            </div>
+                            <div class="invest-buy">
+                                <div class="form-group" hidden>
+                                    <input id="invest-title-input" class="form-control" type="text" name="desc" value="Investment (Buy)">
+                                </div>
+                                <div class="form-group invest_form-group">
+                                    <label for="invest-buy" class="text-label">Payment Method<span class="req">*</span></label>
+                                    <select name="invest-buy" id="" class="input-style" type="select">
+                                        <option value="">USD Wallet</option>
+                                    </select>
+                                </div>
+                                <div class="form-group invest_form-group">
+                                    <label for="amtInput" class="text-label">Investment Plan <span class="req">*</span></label>
+                                    <!-- <input id="invest-amount-input" class="form-control input-style" type="number" name="amtInput" placeholder="Minimum $500" required> -->
+                                    <select name="amtInput" id="invest-amount-input" class="input-style form-control" type="select">
+                                        <option value="500">Regular Plan ($500)</option>
+                                        <option value="1000">Regular Plan ($1,000)</option>
+                                        <option value="3000">Regular Plan ($3,000)</option>
+                                        <option value="5000">Premium Plan ($5,000)</option>
+                                        <option value="7500">Premium Plan ($7,500)</option>
+                                        <option value="10000">Premium Plan ($10,000)</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary btc-submit mt-4" id="invest">buy investment</button>
+                            </div>
+                            <hr>
+                            <div class="invest-footer">
+                                <div class="avail-bal">
+                                    <p class="avail-title">Available Balance:</p>
+                                    <p class="avail-amount"><span>$</span><%= availBal %></p>
+                                </div>
+                            </div>
+                            <hr>
+                        </form>
+                        <form method="post" action="/invest-sell" class="tab-pane fade mt-4" id="invest-sell" role="tabpanel" aria-labelledby="nav-sell-tab">
+                            <div class="invest-sell">
+                                <div class="form-group" hidden>
+                                    <input id="invest-title-input" class="form-control" type="text" name="desc" value="Investment (Sell)">
+                                </div>
+                                <div class="form-group invest_form-group">
+                                    <label for="invest-sell" class="text-label">Payment From: <span class="req">*</span></label>
+                                    <select name="invest-sell" id="" class="input-style" type="select">
+                                        <option value="">Investment Wallet</option>
+                                    </select>
+                                </div>
+                                <div class="form-group invest_form-group">
+                                    <label for="rtn" class="text-label">Payment To: <span class="req">*</span></label>
+                                    <select name="invest-" id="" class="input-style" type="select">
+                                        <option value="">USD Wallet</option>
+                                    </select>
+                                </div>
+                                <div class="form-group invest_form-group">
+                                    <label for="amtInput" class="text-label">Amount <span class="req">*</span></label>
+                                    <input id="invest-amount-input" class="form-control input-style" type="number" name="amtInput" placeholder="Minimum $500" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btc-submit mt-4" id="invest">sell investment</button>
+                            </div>
+                            <hr>
+                            <div class="with-footer">
+                                <div class="avail-bal">
+                                    <p class="avail-title">Available Balance:</p>
+                                    <p class="avil-amount"><span>$</span><%= availBal %></p>
+                                </div>
+                            </div>
+                            <hr>
+                        </form>
+                    </div>
+                      
+                </div>
+            </div>
+        </section>
+
+        <!--footer-->
+        <%- include('../includes/dashboard-footer.ejs') %>
+    </div>
+    <!--/main content wrapper-->
+
+    <!--right sidebar-->
+    <%- include('../includes/dashboard-right-sidebar.ejs') %>
+    <!--basic scripts-->
+    <%- include('../includes/dashboard-script.ejs') %>
+
