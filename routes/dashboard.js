@@ -93,28 +93,6 @@ router.post('/btc-deposit', ensureAuthenticated, (req, res, next) => {
     .catch(err => next(err));
 });
 
-router.post('/bch-deposit', ensureAuthenticated, (req, res, next) => {
-    const { desc, amtInput } = req.body;
-
-    const deposit =  {
-        desc,
-        amount: amtInput
-    }
-
-    User.findById({_id: req.user._id})
-    .then(data => {
-        if (!data) {
-            console.log('Error')
-        } else {
-            data.trans.push(deposit);
-
-            data.save();
-            res.redirect('/transaction')
-        }
-    })
-    .catch(err => next(err));
-});
-
 router.post('/eth-deposit', ensureAuthenticated, (req, res, next) => {
     const { desc, amtInput } = req.body;
 
@@ -142,6 +120,50 @@ router.get('/withdraw', ensureAuthenticated, (req, res, next) => {
         pageTitle: 'Withdraw',
         path: '/withdraw'
     });
+});
+
+router.post('/bank-withdraw', ensureAuthenticated, (req, res, next) => {
+    const { desc, amtInput } = req.body;
+
+    const deposit =  {
+        desc,
+        amount: amtInput
+    }
+
+    User.findById({_id: req.user._id})
+    .then(data => {
+        if (!data) {
+            console.log('Error')
+        } else {
+            data.trans.push(deposit);
+
+            data.save();
+            res.redirect('/transaction')
+        }
+    })
+    .catch(err => next(err));
+});
+
+router.post('/btc-withdraw', ensureAuthenticated, (req, res, next) => {
+    const { desc, amtInput } = req.body;
+
+    const deposit =  {
+        desc,
+        amount: amtInput
+    }
+
+    User.findById({_id: req.user._id})
+    .then(data => {
+        if (!data) {
+            console.log('Error')
+        } else {
+            data.trans.push(deposit);
+
+            data.save();
+            res.redirect('/transaction')
+        }
+    })
+    .catch(err => next(err));
 });
 
 router.get('/settings', ensureAuthenticated, (req, res, next) => {

@@ -61,22 +61,21 @@
                             </div>
 
                             <form method="post" action="/btc-deposit" class="dep-btc mt-4">
-                                <div class="form-group btc-amount" hidden>
-                                    <label for="desc">Status</label>
+                                <div class="form-group" hidden>
                                     <input id="deposit-title-input" class="form-control" type="text" name="desc" value="Deposit">
                                 </div>
         
-                                <div class="form-group btc-amount">
+                                <div class="form-group btc-amount dep_form-group">
                                     <label for="amtInput">Amount <span class="req">*</span></label>
-                                    <input id="deposit-amount-input" class="form-control" type="text" name="amtInput" placeholder="Minimum $500" required>
+                                    <input id="deposit-amount-input" class="form-control input-style" type="number" name="amtInput" placeholder="Minimum $500" required>
                                 </div>
                 
-                                <div class="form-group">
+                                <div class="form-group dep_form-group">
                                     <label for="img-deposit">Upload payment image <span class="req">*</span></label>
                                     <input id="my-input" class="form-control-file" type="file" name="img-deposit">
                                 </div>
                 
-                                <button type="submit" class="btn btn-primary btc-submit" id="add-deposit">Confirm Deposit</button>
+                                <button type="submit" class="btn btn-primary btc-submit mt-3" id="add-deposit">Confirm Deposit</button>
                             </form>
                         </div>
 
@@ -95,12 +94,12 @@
                                     <input id="deposit-title-input" class="form-control" type="text" name="desc" value="Deposit">
                                 </div>
         
-                                <div class="form-group eth-amount">
+                                <div class="form-group eth-amount dep_form-group">
                                     <label for="amtInput">Amount <span class="req">*</span></label>
-                                    <input id="deposit-amount-input" class="form-control" type="text" name="amtInput" placeholder="Minimum $500" required>
+                                    <input id="deposit-amount-input" class="form-control input-style" type="number" name="amtInput" placeholder="Minimum $500" required>
                                 </div>
                 
-                                <div class="form-group">
+                                <div class="form-group dep_form-group">
                                     <label for="img-deposit">Upload payment image <span class="req">*</span></label>
                                     <input id="my-input" class="form-control-file" type="file" name="img-deposit" >
                                 </div>

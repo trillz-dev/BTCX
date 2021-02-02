@@ -19,19 +19,26 @@
                     </nav>
                     
                     <div class="tab-content" id="nav-tabContent">
-                        <form method="post" action="" class="tab-pane fade show active mt-4" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <form method="post" action="/bank-withdraw" class="tab-pane fade show active mt-4" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                             <div class="with-bank">
-                                <div class="form-group with_form-group">
-                                    <label for="bank" class="text-label">Bank Name <span class="req">*</span></label>
-                                    <input type="text" name="bank" id="" required = "true" placeholder="" class="profile-bank">
+                                <div class="form-group" hidden>
+                                    <input id="deposit-title-input" class="form-control" type="text" name="desc" value="Bank tranfser">
                                 </div>
                                 <div class="form-group with_form-group">
-                                    <label for="acct" class="text-label">Account Number <span class="req">*</span></label>
-                                    <input type="text" name="acct" id="" required = "true" placeholder="" class="profile-acct">
+                                    <label for="with-bank" class="text-label">Bank Name <span class="req">*</span></label>
+                                    <input type="text" name="with-bank" id="" required = "true" placeholder="" class="input-style">
                                 </div>
                                 <div class="form-group with_form-group">
-                                    <label for="rtn" class="text-label">Routing Number <span class="req">*</span></label>
-                                    <input type="text" name="rtn" id="" placeholder="" required = "true" class="profile-rtn">
+                                    <label for="with-acct" class="text-label">Account Number <span class="req">*</span></label>
+                                    <input type="number" name="with-acct" id="" required = "true" placeholder="" class="input-style">
+                                </div>
+                                <div class="form-group with_form-group">
+                                    <label for="with-rtn" class="text-label">Routing Number <span class="req">*</span></label>
+                                    <input type="number" name="with-rtn" id="" placeholder="" required = "true" class="input-style">
+                                </div>
+                                <div class="form-group with_form-group">
+                                    <label for="amtInput">Amount <span class="req">*</span></label>
+                                    <input id="withdraw-amount-input" class="form-control input-style" type="number" name="amtInput" placeholder="Minimum $500" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary btc-submit mt-4" id="withdraw">Confirm Withdraw</button>
                             </div>
@@ -49,19 +56,22 @@
                             </div>
                             <hr>
                         </form>
-                        <form method="post" action="" class="tab-pane fade mt-4" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                            <div class="with-bank">
-                                <div class="form-group with_form-group">
-                                    <label for="bank" class="text-label">Bitcoin Address <span class="req">*</span></label>
-                                    <input type="text" name="bank" id="" required = "true" placeholder="" class="profile-bank">
+                        <form method="post" action="/btc-withdraw" class="tab-pane fade mt-4" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div class="with-btc">
+                                <div class="form-group" hidden>
+                                    <input id="deposit-title-input" class="form-control" type="text" name="desc" value="BTC tranfser">
                                 </div>
                                 <div class="form-group with_form-group">
-                                    <label for="acct" class="text-label">Amount <span class="req">*</span></label>
-                                    <input type="text" name="acct" id="" required = "true" placeholder="" class="profile-acct">
+                                    <label for="bank" class="text-label">Bitcoin Address <span class="req">*</span></label>
+                                    <input type="text" name="bank" id="" required = "true" placeholder="" class="input-style">
+                                </div>
+                                <div class="form-group with_form-group">
+                                    <label for="amtInput">Amount <span class="req">*</span></label>
+                                    <input id="withdraw-amount-input" class="form-control input-style" type="number" name="amtInput" placeholder="Minimum $500" required>
                                 </div>
                                 <div class="form-group with_form-group">
                                     <label for="rtn" class="text-label">Reference Note (optional)</label>
-                                    <input type="text" name="rtn" id="" placeholder="" required = "true" class="profile-rtn">
+                                    <input type="text" name="rtn" id="" placeholder="" class="input-style">
                                 </div>
                                 <button type="submit" class="btn btn-primary btc-submit mt-4" id="withdraw">Confirm Withdraw</button>
                             </div>
